@@ -1,0 +1,6 @@
+23:05:56 **** Incremental Build of configuration HardwareDebug for project test01 ****
+make -j8 all 
+'Build complete.'
+
+23:05:56 Build Finished. 0 errors, 0 warnings. (took 216ms)
+

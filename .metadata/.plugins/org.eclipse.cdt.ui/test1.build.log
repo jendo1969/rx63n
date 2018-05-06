@@ -1,0 +1,65 @@
+22:46:39 **** プロジェクト test1 に対する構成 HardwareDebug の 逐次ビルド ****
+make -j8 all 
+'Scanning and building file: ../src/default/IO/R_PG_IO_PORT.c'
+'Scanning and building file: ../src/default/LPC/R_PG_LPC.c'
+'Scanning and building file: ../src/default/SYSTEM/R_PG_Clock.c'
+'Invoking: Scanner and Compiler'
+ccrx  -MM -MP -output=dep="src/default/IO/R_PG_IO_PORT.d" -MT="src/default/IO/R_PG_IO_PORT.obj" -MT="src/default/IO/R_PG_IO_PORT.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/IO/R_PG_IO_PORT.c"
+'Invoking: Scanner and Compiler'
+ccrx  -MM -MP -output=dep="src/default/LPC/R_PG_LPC.d" -MT="src/default/LPC/R_PG_LPC.obj" -MT="src/default/LPC/R_PG_LPC.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/LPC/R_PG_LPC.c"
+'Scanning and building file: ../src/default/i_src/Interrupt_INTC.c'
+W0511180:The evaluation period has expired.
+'Scanning and building file: ../src/test1.c'
+W0511180:The evaluation period has expired.
+'Invoking: Scanner and Compiler'
+'Invoking: Scanner and Compiler'
+ccrx  -MM -MP -output=dep="src/default/SYSTEM/R_PG_Clock.d" -MT="src/default/SYSTEM/R_PG_Clock.obj" -MT="src/default/SYSTEM/R_PG_Clock.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/SYSTEM/R_PG_Clock.c"
+'Invoking: Standard Library'
+ccrx  -MM -MP -output=dep="src/default/i_src/Interrupt_INTC.d" -MT="src/default/i_src/Interrupt_INTC.obj" -MT="src/default/i_src/Interrupt_INTC.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/i_src/Interrupt_INTC.c"
+lbgrx -lang=c99 -head=runtime,stdio,stdlib,string,new -isa=rxv1 -dbl_size=8 -fpu -output="test1.lib"
+'Invoking: Scanner and Compiler'
+ccrx  -MM -MP -output=dep="src/test1.d" -MT="src/test1.obj" -MT="src/test1.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/test1.c"
+
+RX Family C/C++ Standard Library Generator V2.06.00.01 [18 Nov 2016]
+Copyright (C) 2008, 2016 Renesas Electronics Corporation
+All rights reserved.
+
+ccrx -lang=c99 -output=obj="src/default/IO/R_PG_IO_PORT.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/IO/R_PG_IO_PORT.c"
+W0511180:The evaluation period has expired.
+ccrx -lang=c99 -output=obj="src/default/LPC/R_PG_LPC.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/LPC/R_PG_LPC.c"
+W0511180:The evaluation period has expired.
+ccrx -lang=c99 -output=obj="src/default/SYSTEM/R_PG_Clock.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/SYSTEM/R_PG_Clock.c"
+ccrx -lang=c99 -output=obj="src/default/i_src/Interrupt_INTC.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/default/i_src/Interrupt_INTC.c"
+W0511180:The evaluation period has expired.
+W0511180:The evaluation period has expired.
+W0511180:The evaluation period has expired.
+ccrx -lang=c99 -output=obj="src/test1.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\src\default\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -fpu -nologo  -define=__RX=1   "../src/test1.c"
+W0511180:The evaluation period has expired.
+W0511180:The evaluation period has expired.
+W0511180:The evaluation period has expired.
+Library Generator Completed
+'Finished building:'
+
+'Finished scanning and building: ../src/test1.c'
+
+'Finished scanning and building: ../src/default/IO/R_PG_IO_PORT.c'
+'Finished scanning and building: ../src/default/LPC/R_PG_LPC.c'
+
+'Finished scanning and building: ../src/default/SYSTEM/R_PG_Clock.c'
+
+
+'Finished scanning and building: ../src/default/i_src/Interrupt_INTC.c'
+
+'Invoking: Linker'
+'Building target:'
+rlink  -subcommand="LinkerSubCommand.tmp"  -library="D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\HardwareDebug\test1.lib" -noprelink -list="test1.map" -show -nooptimize -debug -output="D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test1\HardwareDebug\test1.abs" -rom=D=R,D_1=R_1,D_2=R_2 -nocompress -vect=_undefined_interrupt_source_isr -nomessage -nologo
+
+E0562133:Cannot find defined symbol "_undefined_interrupt_source_isr" in option "vect"
+
+The evaluation period has expired.
+Renesas Optimizing Linker Abort
+makefile:121: recipe for target 'test1.abs' failed
+make: *** [test1.abs] Error 1
+
+22:46:41 Build Failed. 3 errors, 10 warnings. (took 1s.560ms)
+

@@ -1,0 +1,13 @@
+-input="./src/dbsct.obj"
+-input="./src/reset_program.obj"
+-input="./src/sbrk.obj"
+-input="./src/test01.obj"
+-input="./src/default/CMT/R_PG_Timer_CMT_U0.obj"
+-input="./src/default/IO/R_PG_IO_PORT.obj"
+-input="./src/default/LPC/R_PG_LPC.obj"
+-input="./src/default/SCI/R_PG_SCI_C0.obj"
+-input="./src/default/SYSTEM/R_PG_Clock.obj"
+-input="./src/default/i_src/Interrupt_CMT.obj"
+-input="./src/default/i_src/Interrupt_INTC.obj"
+-input="./src/default/i_src/Interrupt_SCI.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,P/0FFF00000,FIXEDVECT/0FFFFFFD0

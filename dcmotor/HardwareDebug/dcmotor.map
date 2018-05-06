@@ -1,0 +1,1842 @@
+Renesas Optimizing Linker (W2.06.00 )             06-May-2018 08:55:22
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./src/dbsct.obj"
+-input="./src/dcmotor.obj"
+-input="./src/reset_program.obj"
+-input="./src/sbrk.obj"
+-input="./src/dcmotor/IO/R_PG_IO_PORT.obj"
+-input="./src/dcmotor/IO/R_PG_IO_PORT_P5.obj"
+-input="./src/dcmotor/IO/R_PG_IO_PORT_PA.obj"
+-input="./src/dcmotor/LPC/R_PG_LPC.obj"
+-input="./src/dcmotor/MTU/R_PG_Timer_MTU_U0.obj"
+-input="./src/dcmotor/MTU/R_PG_Timer_MTU_U0_C1.obj"
+-input="./src/dcmotor/MTU/R_PG_Timer_MTU_U0_C3.obj"
+-input="./src/dcmotor/SCI/R_PG_SCI_C2.obj"
+-input="./src/dcmotor/SYSTEM/R_PG_Clock.obj"
+-input="./src/dcmotor/TMR/R_PG_Timer_TMR_U0.obj"
+-input="./src/dcmotor/i_src/Interrupt_INTC.obj"
+-input="./src/dcmotor/i_src/Interrupt_MTU2.obj"
+-input="./src/dcmotor/i_src/Interrupt_MTU2_TPU.obj"
+-input="./src/dcmotor/i_src/Interrupt_SCI.obj"
+-input="./src/dcmotor/i_src/Interrupt_TMR.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,P/0FFF00000,FIXEDVECT/0FFFFFFD0
+-library=D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.lib
+-library=D:\Renesas\PDG2\lib\RX63N\RX63N_library_100_little.lib
+-noprelink
+-list=dcmotor.map
+-show
+-nooptimize
+-debug
+-output=D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  00000470        6d   1
+R_1
+                                  00000471  000004c2        52   1
+B_2
+                                  000004c4  000004e1        1e   2
+R_2
+                                  000004e2  000004e9         8   2
+B
+                                  000004ec  00000dd3       8e8   4
+R
+                                  00000dd4  00001173       3a0   4
+PResetPRG
+                                  fff00000  fff00030        31   1
+C_1
+                                  fff00031  fff00142       112   1
+C_2
+                                  fff00144  fff00353       210   2
+C
+                                  fff00354  fff0047b       128   4
+C$DSEC
+                                  fff0047c  fff0049f        24   4
+C$BSEC
+                                  fff004a0  fff004b7        18   4
+C$INIT
+                                  fff004b8  fff004b8         0   1
+C$VECT
+                                  fff004b8  fff008b7       400   4
+C$VTBL
+                                  fff008b8  fff008b8         0   1
+D
+                                  fff008b8  fff00c57       3a0   4
+D_1
+                                  fff00c58  fff00ca9        52   1
+D_2
+                                  fff00caa  fff00cb1         8   2
+W
+                                  fff00cb4  fff00cb4         0   4
+W_1
+                                  fff00cb4  fff00cd7        24   1
+W_2
+                                  fff00cd8  fff00ced        16   2
+L
+                                  fff00cf0  fff00d4c        5d   4
+P
+                                  fff00d4d  fff1462b     138df   1
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff83         4   1
+FIXEDVECT
+                                  ffffffd0  ffffffff        30   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\src\reset_program.obj
+                                  00000004  00000103       100
+
+SECTION=SI
+FILE=.\src\reset_program.obj
+                                  00000104  00000403       300
+
+SECTION=B_1
+FILE=.\src\dcmotor.obj
+                                  00000404  0000044a        47
+  _it_1000ms_flag
+                                  00000404         1   data ,g         6
+  _it_100ms_flag
+                                  00000405         1   data ,g         4
+  _led0_state
+                                  00000406         1   data ,g         5
+  _led1_state
+                                  00000407         1   data ,g         1
+  _led2_state
+                                  00000408         1   data ,g         1
+  _xbee_reset
+                                  00000409         1   data ,g         2
+  _buf
+                                  0000040a        40   data ,g         4
+  _speed_cnt
+                                  0000044a         1   data ,g        2c
+FILE=globals_INTC
+                                  0000044b  0000044c         2
+  _rpdl_INTC_brk_command
+                                  0000044b         1   data ,g         7
+  _rpdl_INTC_brk_data8
+                                  0000044c         1   data ,g         5
+FILE=globals_MTU2
+                                  0000044d  0000044d         1
+  _rpdl_MTU2_tmdr_copy
+                                  0000044d         1   data ,g         4
+FILE=globals_SPI
+                                  0000044e  00000457         a
+  _rpdl_SPI_method
+                                  0000044e         2   data ,g         0
+  _rpdl_SPI_tx_frame_counter
+                                  00000450         2   data ,g         0
+  _rpdl_SPI_frame_total
+                                  00000452         2   data ,g         0
+  _rpdl_SPI_rx_frame_counter
+                                  00000454         2   data ,g         0
+  _rpdl_SPI_spcr_copy
+                                  00000456         2   data ,g         0
+FILE=globals_TMR
+                                  00000458  00000463         c
+  _rpdl_TMR_tcsr_setting
+                                  00000458         4   data ,g         0
+  _rpdl_TMR_tccr8_setting
+                                  0000045c         4   data ,g         0
+  _rpdl_TMR_one_shot
+                                  00000460         4   data ,g         b
+FILE=globals_TPU
+                                  00000464  00000469         6
+  _rpdl_TPU_tgra_dmac_channel
+                                  00000464         6   data ,g         0
+FILE=globals_ADC_10
+                                  0000046a  0000046b         2
+  _rpdl_adcsr0_copy
+                                  0000046a         1   data ,g         1
+  _rpdl_adcr0_copy
+                                  0000046b         1   data ,g         0
+FILE=globals_CGC
+                                  0000046c  00000470         5
+  _rpdl_CGC_bckcr_copy
+                                  0000046c         5   data ,g         2
+
+SECTION=R_1
+FILE=.\src\dcmotor.obj
+                                  00000471  00000471         1
+  _step
+                                  00000471         1   data ,g         6
+FILE=xfiles
+                                  00000472  000004c1        50
+  _ebuf
+                                  00000472        50   data ,l         5
+FILE=xstate
+                                  000004c2  000004c2         1
+  __Mbcurmax
+                                  000004c2         1   data ,g         1
+
+SECTION=B_2
+FILE=.\src\dcmotor.obj
+                                  000004c4  000004c7         4
+  _cnt_val
+                                  000004c4         2   data ,g         2
+  _over_val
+                                  000004c6         2   data ,g         4
+FILE=globals_SPI
+                                  000004c8  000004d3         c
+  _rpdl_SPI_sequence_count
+                                  000004c8         4   data ,g         0
+  _rpdl_SPI_tx_sequence_counter
+                                  000004cc         4   data ,g         0
+  _rpdl_SPI_rx_sequence_counter
+                                  000004d0         4   data ,g         0
+FILE=globals_TMR
+                                  000004d4  000004d7         4
+  _rpdl_TMR_tccr16_setting
+                                  000004d4         4   data ,g         2
+FILE=globals_CGC
+                                  000004d8  000004e1         a
+  _rpdl_CGC_sckcr2_copy
+                                  000004d8         a   data ,g         2
+
+SECTION=R_2
+FILE=utilities_common
+                                  000004e2  000004e9         8
+  _rpdl_RWP_PRCR_enable_counter
+                                  000004e2         6   data ,l         6
+  _rpdl_MPC_PWPR_enable_counter
+                                  000004e8         2   data ,l         2
+
+SECTION=B
+FILE=.\src\dcmotor.obj
+                                  000004ec  000004f3         8
+  _it_cnt
+                                  000004ec         4   data ,g         5
+  _encode_val
+                                  000004f0         4   data ,g         3
+FILE=.\src\sbrk.obj
+                                  000004f4  000008f3       400
+  _heap_area
+                                  000004f4       400   data ,l         2
+FILE=globals_INTC
+                                  000008f4  000008f7         4
+  _rpdl_INTC_saved_isp
+                                  000008f4         4   data ,g         1
+FILE=globals_MTU2
+                                  000008f8  000009b7        c0
+  _rpdl_MTU2_func1_callback_func
+                                  000008f8        18   data ,g         d
+  _rpdl_MTU2_func2_callback_func
+                                  00000910        18   data ,g         d
+  _rpdl_MTU2_func3_callback_func
+                                  00000928        18   data ,g         9
+  _rpdl_MTU2_func4_callback_func
+                                  00000940        18   data ,g         7
+  _rpdl_MTU2_TGRE_callback_func
+                                  00000958        18   data ,g         3
+  _rpdl_MTU2_TGRF_callback_func
+                                  00000970        18   data ,g         3
+  _rpdl_MTU2_Overflow_callback_func
+                                  00000988        18   data ,g         b
+  _rpdl_MTU2_Underflow_callback_func
+                                  000009a0        18   data ,g         5
+FILE=globals_SCI
+                                  000009b8  00000c27       270
+  _sci_global
+                                  000009b8       270   data ,g       170
+FILE=globals_SPI
+                                  00000c28  00000c37        10
+  _rpdl_SPI_tx_ptr
+                                  00000c28         8   data ,g         0
+  _rpdl_SPI_rx_ptr
+                                  00000c30         8   data ,g         0
+FILE=globals_TMR
+                                  00000c38  00000c67        30
+  _rpdl_TMR_Overflow_callback_func
+                                  00000c38        10   data ,g         9
+  _rpdl_TMR_CMA_callback_func
+                                  00000c48        10   data ,g         9
+  _rpdl_TMR_CMB_callback_func
+                                  00000c58        10   data ,g         9
+FILE=globals_ADC_10
+                                  00000c68  00000c6b         4
+  _rpdl_ADC_10_callback_func
+                                  00000c68         4   data ,g         0
+FILE=globals_CGC
+                                  00000c6c  00000dcf       164
+  _rpdl_CGC_f_iclk
+                                  00000c6c         8   data ,g         6
+  _rpdl_CGC_f_pclka
+                                  00000c74         8   data ,g         2
+  _rpdl_CGC_f_pclkb
+                                  00000c7c         8   data ,g         c
+  _rpdl_CGC_f_fclk
+                                  00000c84         8   data ,g         4
+  _rpdl_CGC_f_bclk
+                                  00000c8c         8   data ,g         4
+  _rpdl_CGC_f_ieclk
+                                  00000c94         8   data ,g         2
+  _rpdl_CGC_f_uclk
+                                  00000c9c         8   data ,g         2
+  _rpdl_CGC_f_iclk_storage
+                                  00000ca4        28   data ,g         2
+  _rpdl_CGC_f_pclka_storage
+                                  00000ccc        28   data ,g         2
+  _rpdl_CGC_f_pclkb_storage
+                                  00000cf4        28   data ,g         4
+  _rpdl_CGC_f_fclk_storage
+                                  00000d1c        28   data ,g         2
+  _rpdl_CGC_f_bclk_storage
+                                  00000d44        28   data ,g         3
+  _rpdl_CGC_f_ieclk_storage
+                                  00000d6c        28   data ,g         2
+  _rpdl_CGC_f_uclk_storage
+                                  00000d94        28   data ,g         2
+  _rpdl_CGC_sckcr_copy
+                                  00000dbc        14   data ,g         2
+FILE=_errno
+                                  00000dd0  00000dd3         4
+  __errno
+                                  00000dd0         4   data ,g         1
+
+SECTION=R
+FILE=.\src\sbrk.obj
+                                  00000dd4  00000dd7         4
+  _brk
+                                  00000dd4         4   data ,l         3
+FILE=globals_INTC
+                                  00000dd8  00000e4f        78
+  _rpdl_INTC_callback_func
+                                  00000dd8        58   data ,g        2c
+  _rpdl_INTC_group_callback_func
+                                  00000e30        20   data ,g        10
+FILE=globals_SPI
+                                  00000e50  00000e5f        10
+  _rpdl_SPI_event_callback_func
+                                  00000e50         8   data ,g         0
+  _rpdl_SPI_error_callback_func
+                                  00000e58         8   data ,g         4
+FILE=globals_TPU
+                                  00000e60  00000eef        90
+  _rpdl_TPU_TGRA_callback_func
+                                  00000e60        18   data ,g         0
+  _rpdl_TPU_TGRB_callback_func
+                                  00000e78        18   data ,g         0
+  _rpdl_TPU_TGRC_callback_func
+                                  00000e90        18   data ,g         0
+  _rpdl_TPU_TGRD_callback_func
+                                  00000ea8        18   data ,g         0
+  _rpdl_TPU_Overflow_callback_func
+                                  00000ec0        18   data ,g         c
+  _rpdl_TPU_Underflow_callback_func
+                                  00000ed8        18   data ,g         8
+FILE=xprintf
+                                  00000ef0  00000ef3         4
+  _stderr
+                                  00000ef0         4   data ,g         0
+FILE=globals_CGC
+                                  00000ef4  00000f2b        38
+  _rpdl_CGC_f_source_clock
+                                  00000ef4        30   data ,g        12
+  _rpdl_cgc_set_done
+                                  00000f24         4   data ,g         1
+  _rpdl_cgc_pclkb_fchk_en
+                                  00000f28         4   data ,g         3
+FILE=xfiles
+                                  00000f2c  00001003        d8
+  __Stdin
+                                  00000f2c        48   data ,g         7
+  __Stdout
+                                  00000f74        48   data ,g         7
+  __Stderr
+                                  00000fbc        48   data ,g         3
+FILE=xctype
+                                  00001004  0000100b         8
+  __Ctype
+                                  00001004         4   data ,g         4
+  __Tls_setup__Ctype
+                                  00001008         4   data ,g         2
+FILE=xstate
+                                  0000100c  00001053        48
+  __Tls_setup__Mbcurmax
+                                  0000100c         4   data ,g         2
+  __Mbstate
+                                  00001010        40   data ,g         2
+  __Tls_setup__Mbstate
+                                  00001050         4   data ,g         4
+FILE=malloc
+                                  00001054  0000105b         8
+  __Aldata
+                                  00001054         8   data ,g         b
+FILE=localeco
+                                  0000105c  000010af        54
+  __Locale
+                                  0000105c        50   data ,g         1
+  __Tls_setup__Locale
+                                  000010ac         4   data ,g         0
+FILE=xwcstate
+                                  000010b0  000010f3        44
+  __Wcstate
+                                  000010b0        40   data ,g         2
+  __Tls_setup__Wcstate
+                                  000010f0         4   data ,g         4
+FILE=xvalues
+                                  000010f4  00001173        80
+  __Denorm
+                                  000010f4        10   data ,g         0
+  __Eps
+                                  00001104        10   data ,g         0
+  __Hugeval
+                                  00001114        10   data ,g         0
+  __Inf
+                                  00001124        10   data ,g         1
+  __Nan
+                                  00001134        10   data ,g         0
+  __Snan
+                                  00001144        10   data ,g         0
+  __Rteps
+                                  00001154        10   data ,g         0
+  __Xbig
+                                  00001164         8   data ,g         0
+  __Zero
+                                  0000116c         8   data ,g         0
+
+SECTION=PResetPRG
+FILE=.\src\reset_program.obj
+                                  fff00000  fff00030        31
+  _PowerON_Reset_PC
+                                  fff00000        31   entry,g         1
+
+SECTION=C_1
+FILE=globals_MTU2
+                                  fff00031  fff00035         5
+  _rpdl_MTU2_TSTR_mask
+                                  fff00031         5   data ,g         2
+FILE=globals_SCI
+                                  fff00036  fff00039         4
+  _rpdl_SCI_div_value
+                                  fff00036         4   data ,g         1
+FILE=globals_TPU
+                                  fff0003a  fff0003f         6
+  _rpdl_TPU_gcr_mask
+                                  fff0003a         6   data ,g         0
+FILE=xprintf
+                                  fff00040  fff00049         a
+  _fchar$1
+                                  fff00040         a   data ,l         3
+FILE=globals_ADC_10
+                                  fff0004a  fff0004d         4
+  _rpdl_ADC_10_div_value
+                                  fff0004a         4   data ,g         0
+FILE=globals_CGC
+                                  fff0004e  fff0007a        2d
+  _rpdl_CGC_PLL_divider_values
+                                  fff0004e         3   data ,g         1
+  _rpdl_CGC_PLL_multiplier_values
+                                  fff00051         8   data ,g         1
+  _rpdl_CGC_SCKCR_divider_values
+                                  fff00059         7   data ,g         1
+  _rpdl_CGC_IEBCK_divider_values
+                                  fff00060         d   data ,g         1
+  _rpdl_CGC_UCK_divider_values
+                                  fff0006d         4   data ,g         1
+  _rpdl_CGC_SCKCR_offsets
+                                  fff00071         5   data ,g         1
+  _rpdl_CGC_source_f_lookup
+                                  fff00076         5   data ,g         0
+FILE=xputtxt
+                                  fff0007b  fff0011f        a5
+  _spaces
+                                  fff0007b        21   data ,l         2
+  _zeroes
+                                  fff0009c        21   data ,l         3
+  _asterisk
+                                  fff000bd        21   data ,l         1
+  _plus
+                                  fff000de        21   data ,l         1
+  _minus
+                                  fff000ff        21   data ,l         1
+FILE=xlitob
+                                  fff00120  fff00141        22
+  _ldigs
+                                  fff00120        11   data ,l         1
+  _udigs
+                                  fff00131        11   data ,l         1
+FILE=localeco
+                                  fff00142  fff00142         1
+  _null
+                                  fff00142         1   data ,l         d
+
+SECTION=C_2
+FILE=globals_TMR
+                                  fff00144  fff00151         e
+  _rpdl_TMR_div_value
+                                  fff00144         e   data ,g         0
+FILE=xctype
+                                  fff00152  fff00353       202
+  _ctyp_tab
+                                  fff00152       202   data ,l         1
+
+SECTION=C
+FILE=.\src\dbsct.obj
+                                  fff00354  fff00387        34
+  __CTBL
+                                  fff00354        34   data ,g         0
+FILE=xprintf
+                                  fff00388  fff0039f        18
+  _fbit$2
+                                  fff00388        18   data ,l         1
+FILE=utilities_LPC
+                                  fff003a0  fff0041f        80
+  _LPC_Clock_Range_LowSpeed_1
+                                  fff003a0        40   data ,l         1
+  _LPC_Clock_Range_LowSpeed_2
+                                  fff003e0        40   data ,g         1
+FILE=xputfld
+                                  fff00420  fff00423         4
+  _vpsize$1
+                                  fff00420         4   data ,l         1
+FILE=xvacopy
+                                  fff00424  fff00427         4
+  _vasize$1
+                                  fff00424         4   data ,l         1
+FILE=xldtob
+                                  fff00428  fff0046f        48
+  _pows
+                                  fff00428        48   data ,l         2
+FILE=xwctomb
+                                  fff00470  fff00477         8
+  _initial$1
+                                  fff00470         8   data ,l         2
+FILE=_sbrk_si
+                                  fff00478  fff0047b         4
+  __sbrk_size
+                                  fff00478         4   data ,g         1
+
+SECTION=C$DSEC
+FILE=.\src\dbsct.obj
+                                  fff0047c  fff0049f        24
+  __DTBL
+                                  fff0047c        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\src\dbsct.obj
+                                  fff004a0  fff004b7        18
+  __BTBL
+                                  fff004a0        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\src\dbsct.obj
+                                  fff004b8  fff008b7       400
+
+SECTION=D
+FILE=.\src\sbrk.obj
+                                  fff008b8  fff008bb         4
+FILE=globals_INTC
+                                  fff008bc  fff00933        78
+FILE=globals_SPI
+                                  fff00934  fff00943        10
+FILE=globals_TPU
+                                  fff00944  fff009d3        90
+FILE=xprintf
+                                  fff009d4  fff009d7         4
+FILE=globals_CGC
+                                  fff009d8  fff00a0f        38
+FILE=xfiles
+                                  fff00a10  fff00ae7        d8
+FILE=xctype
+                                  fff00ae8  fff00aef         8
+FILE=xstate
+                                  fff00af0  fff00b37        48
+FILE=malloc
+                                  fff00b38  fff00b3f         8
+FILE=localeco
+                                  fff00b40  fff00b93        54
+FILE=xwcstate
+                                  fff00b94  fff00bd7        44
+FILE=xvalues
+                                  fff00bd8  fff00c57        80
+
+SECTION=D_1
+FILE=.\src\dcmotor.obj
+                                  fff00c58  fff00c58         1
+FILE=xfiles
+                                  fff00c59  fff00ca8        50
+FILE=xstate
+                                  fff00ca9  fff00ca9         1
+
+SECTION=D_2
+FILE=utilities_common
+                                  fff00caa  fff00cb1         8
+
+SECTION=W_1
+FILE=utilities_IO_PORT
+                                  fff00cb4  fff00cd7        24
+
+SECTION=W_2
+FILE=.\src\dcmotor\i_src\Interrupt_INTC.obj
+                                  fff00cd8  fff00ced        16
+
+SECTION=L
+FILE=.\src\dcmotor.obj
+                                  fff00cf0  fff00d0c        1d
+FILE=xprintf
+                                  fff00d10  fff00d16         7
+FILE=xldtob
+                                  fff00d18  fff00d39        22
+FILE=xgenld
+                                  fff00d3c  fff00d3d         2
+FILE=localeco
+                                  fff00d40  fff00d4c         d
+
+SECTION=P
+FILE=.\src\dcmotor.obj
+                                  fff00d4d  fff0128b       53f
+  _Tmr0CmAIntFunc
+                                  fff00d4d        8a   func ,g         1
+  _Tmr0CmBIntFunc
+                                  fff00dd7        16   func ,g         1
+  _Mtu1OvIntFunc
+                                  fff00ded         d   func ,g         1
+  _Mtu1UnIntFunc
+                                  fff00dfa         d   func ,g         1
+  _Mtu3IcCmAIntFunc
+                                  fff00e07         1   func ,g         1
+  _Mtu3IcCmBIntFunc
+                                  fff00e08        2e   func ,g         1
+  _Mtu3IcCmCIntFunc
+                                  fff00e36         1   func ,g         1
+  _Mtu3IcCmDIntFunc
+                                  fff00e37        33   func ,g         1
+  _Mtu3OvIntFunc
+                                  fff00e6a         1   func ,g         1
+  _main
+                                  fff00e6b       421   func ,g         1
+FILE=.\src\sbrk.obj
+                                  fff0128c  fff012c7        3c
+  _sbrk
+                                  fff0128c        3c   func ,g         1
+FILE=.\src\dcmotor\IO\R_PG_IO_PORT.obj
+                                  fff012c8  fff012d5         e
+  _R_PG_IO_PORT_SetPortNotAvailable
+                                  fff012c8         e   func ,g         0
+FILE=.\src\dcmotor\IO\R_PG_IO_PORT_P5.obj
+                                  fff012d6  fff01466       191
+  _R_PG_IO_PORT_Set_P5
+                                  fff012d6        2f   func ,g         0
+  _R_PG_IO_PORT_Set_P51
+                                  fff01305        1f   func ,g         0
+  _R_PG_IO_PORT_Read_P5
+                                  fff01324        24   func ,g         0
+  _R_PG_IO_PORT_Read_P50
+                                  fff01348        26   func ,g         0
+  _R_PG_IO_PORT_Read_P51
+                                  fff0136e        26   func ,g         0
+  _R_PG_IO_PORT_Read_P52
+                                  fff01394        26   func ,g         0
+  _R_PG_IO_PORT_Read_P53
+                                  fff013ba        26   func ,g         0
+  _R_PG_IO_PORT_Read_P54
+                                  fff013e0        27   func ,g         0
+  _R_PG_IO_PORT_Read_P55
+                                  fff01407        27   func ,g         0
+  _R_PG_IO_PORT_Write_P5
+                                  fff0142e        1a   func ,g         0
+  _R_PG_IO_PORT_Write_P51
+                                  fff01448        1f   func ,g         1
+FILE=.\src\dcmotor\IO\R_PG_IO_PORT_PA.obj
+                                  fff01467  fff017fd       397
+  _R_PG_IO_PORT_Set_PA
+                                  fff01467        ec   func ,g         1
+  _R_PG_IO_PORT_Set_PA0
+                                  fff01553        1f   func ,g         0
+  _R_PG_IO_PORT_Set_PA1
+                                  fff01572        1f   func ,g         0
+  _R_PG_IO_PORT_Set_PA2
+                                  fff01591        1f   func ,g         0
+  _R_PG_IO_PORT_Set_PA6
+                                  fff015b0        20   func ,g         0
+  _R_PG_IO_PORT_Set_PA7
+                                  fff015d0        1f   func ,g         0
+  _R_PG_IO_PORT_Read_PA
+                                  fff015ef        24   func ,g         0
+  _R_PG_IO_PORT_Read_PA0
+                                  fff01613        26   func ,g         0
+  _R_PG_IO_PORT_Read_PA1
+                                  fff01639        26   func ,g         0
+  _R_PG_IO_PORT_Read_PA2
+                                  fff0165f        26   func ,g         0
+  _R_PG_IO_PORT_Read_PA3
+                                  fff01685        26   func ,g         0
+  _R_PG_IO_PORT_Read_PA4
+                                  fff016ab        27   func ,g         0
+  _R_PG_IO_PORT_Read_PA5
+                                  fff016d2        27   func ,g         0
+  _R_PG_IO_PORT_Read_PA6
+                                  fff016f9        27   func ,g         0
+  _R_PG_IO_PORT_Read_PA7
+                                  fff01720        27   func ,g         1
+  _R_PG_IO_PORT_Write_PA
+                                  fff01747        1a   func ,g         0
+  _R_PG_IO_PORT_Write_PA0
+                                  fff01761        1f   func ,g         2
+  _R_PG_IO_PORT_Write_PA1
+                                  fff01780        1f   func ,g         0
+  _R_PG_IO_PORT_Write_PA2
+                                  fff0179f        1f   func ,g         0
+  _R_PG_IO_PORT_Write_PA6
+                                  fff017be        20   func ,g         2
+  _R_PG_IO_PORT_Write_PA7
+                                  fff017de        20   func ,g         0
+FILE=.\src\dcmotor\LPC\R_PG_LPC.obj
+                                  fff017fe  fff019a4       1a7
+  _R_PG_LPC_Set
+                                  fff017fe        2e   func ,g         0
+  _R_PG_LPC_Sleep
+                                  fff0182c        10   func ,g         0
+  _R_PG_LPC_AllModuleClockStop
+                                  fff0183c        11   func ,g         0
+  _R_PG_LPC_DeepSoftwareStandby
+                                  fff0184d        10   func ,g         0
+  _R_PG_LPC_SoftwareStandby
+                                  fff0185d        10   func ,g         0
+  _R_PG_LPC_ChangeOperatingPowerControl
+                                  fff0186d        3a   func ,g         0
+  _R_PG_LPC_ChangeSleepModeReturnClock
+                                  fff018a7        3a   func ,g         0
+  _R_PG_LPC_GetOperatingPowerControlFlag
+                                  fff018e1        29   func ,g         0
+  _R_PG_LPC_GetPowerOnResetFlag
+                                  fff0190a        29   func ,g         0
+  _R_PG_LPC_GetLVDDetectionFlag
+                                  fff01933        49   func ,g         0
+  _R_PG_LPC_GetDeepSoftwareStandbyResetFlag
+                                  fff0197c        29   func ,g         0
+FILE=.\src\dcmotor\MTU\R_PG_Timer_MTU_U0.obj
+                                  fff019a5  fff01a3c        98
+  _R_PG_Timer_SynchronouslyStartCount_MTU_U0
+                                  fff019a5        82   func ,g         0
+  _R_PG_Timer_StopModule_MTU_U0
+                                  fff01a27        16   func ,g         0
+FILE=.\src\dcmotor\MTU\R_PG_Timer_MTU_U0_C1.obj
+                                  fff01a3d  fff01d18       2dc
+  _R_PG_Timer_Set_MTU_U0_C1
+                                  fff01a3d        6e   func ,g         1
+  _R_PG_Timer_StartCount_MTU_U0_C1
+                                  fff01aab        3b   func ,g         1
+  _R_PG_Timer_HaltCount_MTU_U0_C1
+                                  fff01ae6        3b   func ,g         0
+  _R_PG_Timer_GetCounterValue_MTU_U0_C1
+                                  fff01b21        39   func ,g         1
+  _R_PG_Timer_SetCounterValue_MTU_U0_C1
+                                  fff01b5a        3e   func ,g         1
+  _R_PG_Timer_GetTGR_MTU_U0_C1
+                                  fff01b98        5a   func ,g         0
+  _R_PG_Timer_SetTGR_A_MTU_U0_C1
+                                  fff01bf2        3e   func ,g         0
+  _R_PG_Timer_SetTGR_B_MTU_U0_C1
+                                  fff01c30        3e   func ,g         0
+  _R_PG_Timer_GetRequestFlag_MTU_U0_C1
+                                  fff01c6e        ab   func ,g         0
+FILE=.\src\dcmotor\MTU\R_PG_Timer_MTU_U0_C3.obj
+                                  fff01d19  fff020c6       3ae
+  _R_PG_Timer_Set_MTU_U0_C3
+                                  fff01d19        a3   func ,g         1
+  _R_PG_Timer_StartCount_MTU_U0_C3
+                                  fff01dbc        3b   func ,g         3
+  _R_PG_Timer_HaltCount_MTU_U0_C3
+                                  fff01df7        3b   func ,g         2
+  _R_PG_Timer_GetCounterValue_MTU_U0_C3
+                                  fff01e32        39   func ,g         0
+  _R_PG_Timer_SetCounterValue_MTU_U0_C3
+                                  fff01e6b        3e   func ,g         0
+  _R_PG_Timer_GetTGR_MTU_U0_C3
+                                  fff01ea9        7c   func ,g         0
+  _R_PG_Timer_SetTGR_A_MTU_U0_C3
+                                  fff01f25        3e   func ,g         0
+  _R_PG_Timer_SetTGR_B_MTU_U0_C3
+                                  fff01f63        3e   func ,g         3
+  _R_PG_Timer_SetTGR_C_MTU_U0_C3
+                                  fff01fa1        3e   func ,g         0
+  _R_PG_Timer_SetTGR_D_MTU_U0_C3
+                                  fff01fdf        3e   func ,g         3
+  _R_PG_Timer_GetRequestFlag_MTU_U0_C3
+                                  fff0201d        aa   func ,g         0
+FILE=.\src\dcmotor\SCI\R_PG_SCI_C2.obj
+                                  fff020c7  fff022c1       1fb
+  _R_PG_SCI_Set_C2
+                                  fff020c7        54   func ,g         1
+  _R_PG_SCI_SendAllData_C2
+                                  fff0211b        35   func ,g         2
+  _R_PG_SCI_GetSentDataCount_C2
+                                  fff02150        31   func ,g         0
+  _R_PG_SCI_ReceiveAllData_C2
+                                  fff02181        39   func ,g         0
+  _R_PG_SCI_StopCommunication_C2
+                                  fff021ba        18   func ,g         0
+  _R_PG_SCI_GetReceivedDataCount_C2
+                                  fff021d2        32   func ,g         0
+  _R_PG_SCI_GetReceptionErrorFlag_C2
+                                  fff02204        57   func ,g         0
+  _R_PG_SCI_ClearReceptionErrorFlag_C2
+                                  fff0225b        19   func ,g         0
+  _R_PG_SCI_GetTransmitStatus_C2
+                                  fff02274        38   func ,g         0
+  _R_PG_SCI_StopModule_C2
+                                  fff022ac        16   func ,g         0
+FILE=.\src\dcmotor\SYSTEM\R_PG_Clock.obj
+                                  fff022c2  fff0276b       4aa
+  _R_PG_Clock_Set
+                                  fff022c2       170   func ,g         1
+  _R_PG_Clock_WaitSet
+                                  fff02432       17d   func ,g         0
+  _R_PG_Clock_Start_LOCO
+                                  fff025af        15   func ,g         0
+  _R_PG_Clock_Stop_LOCO
+                                  fff025c4        15   func ,g         0
+  _R_PG_Clock_Start_MAIN
+                                  fff025d9        16   func ,g         0
+  _R_PG_Clock_Stop_MAIN
+                                  fff025ef        16   func ,g         0
+  _R_PG_Clock_Enable_MAIN_ForcedOscillation
+                                  fff02605        16   func ,g         0
+  _R_PG_Clock_Disable_MAIN_ForcedOscillation
+                                  fff0261b        16   func ,g         0
+  _R_PG_Clock_Start_SUB
+                                  fff02631        14   func ,g         0
+  _R_PG_Clock_Stop_SUB
+                                  fff02645        14   func ,g         0
+  _R_PG_Clock_Start_PLL
+                                  fff02659        14   func ,g         0
+  _R_PG_Clock_Stop_PLL
+                                  fff0266d        14   func ,g         0
+  _R_PG_Clock_GetSelectedClockSource
+                                  fff02681        27   func ,g         0
+  _R_PG_Clock_GetClocksStatus
+                                  fff026a8        7a   func ,g         0
+  _R_PG_Clock_GetHOCOPowerStatus
+                                  fff02722        25   func ,g         0
+  _R_PG_Clock_GetFlag_MAIN_StopDetection
+                                  fff02747        25   func ,g         0
+FILE=.\src\dcmotor\TMR\R_PG_Timer_TMR_U0.obj
+                                  fff0276c  fff028ee       183
+  _R_PG_Timer_Start_TMR_U0
+                                  fff0276c        72   func ,g         1
+  _R_PG_Timer_HaltCount_TMR_U0
+                                  fff027de        26   func ,g         0
+  _R_PG_Timer_ResumeCount_TMR_U0
+                                  fff02804        26   func ,g         0
+  _R_PG_Timer_GetCounterValue_TMR_U0
+                                  fff0282a        30   func ,g         0
+  _R_PG_Timer_SetCounterValue_TMR_U0
+                                  fff0285a        28   func ,g         0
+  _R_PG_Timer_GetRequestFlag_TMR_U0
+                                  fff02882        57   func ,g         0
+  _R_PG_Timer_StopModule_TMR_U0
+                                  fff028d9        16   func ,g         0
+FILE=.\src\dcmotor\i_src\Interrupt_INTC.obj
+                                  fff028ef  fff03525       c37
+  _Interrupt_IRQ0
+                                  fff028ef        29   func ,g         0
+  _Interrupt_IRQ1
+                                  fff02918        29   func ,g         0
+  _Interrupt_IRQ2
+                                  fff02941        29   func ,g         0
+  _Interrupt_IRQ3
+                                  fff0296a        29   func ,g         0
+  _Interrupt_IRQ4
+                                  fff02993        29   func ,g         0
+  _Interrupt_IRQ5
+                                  fff029bc        29   func ,g         0
+  _Interrupt_IRQ6
+                                  fff029e5        29   func ,g         0
+  _Interrupt_IRQ7
+                                  fff02a0e        29   func ,g         0
+  _Interrupt_IRQ8
+                                  fff02a37        29   func ,g         0
+  _Interrupt_IRQ9
+                                  fff02a60        29   func ,g         0
+  _Interrupt_IRQ10
+                                  fff02a89        29   func ,g         0
+  _Interrupt_IRQ11
+                                  fff02ab2        29   func ,g         0
+  _Interrupt_IRQ12
+                                  fff02adb        29   func ,g         0
+  _Interrupt_IRQ13
+                                  fff02b04        29   func ,g         0
+  _Interrupt_IRQ14
+                                  fff02b2d        29   func ,g         0
+  _Interrupt_IRQ15
+                                  fff02b56        29   func ,g         0
+  _Interrupt_Group_0
+                                  fff02b7f        29   func ,g         0
+  _Interrupt_Group_1
+                                  fff02ba8        c2   func ,g         0
+  _Interrupt_Group_2
+                                  fff02c6a        c2   func ,g         0
+  _Interrupt_Group_3
+                                  fff02d2c       118   func ,g         0
+  _Interrupt_Group_4
+                                  fff02e44       118   func ,g         0
+  _Interrupt_Group_5
+                                  fff02f5c        2e   func ,g         0
+  _Interrupt_Group_6
+                                  fff02f8a        2e   func ,g         0
+  _Interrupt_Group_12
+                                  fff02fb8       2bc   func ,g         0
+  _Interrupt_SWINT
+                                  fff03274        29   func ,g         0
+  _Interrupt_BRK
+                                  fff0329d       1bb   func ,g         0
+  _Excep_PrivilegedInst
+                                  fff03458        29   func ,g         1
+  _Excep_Access
+                                  fff03481        29   func ,g         1
+  _Excep_UndefinedInst
+                                  fff034aa        29   func ,g         1
+  _Excep_FloatingPoint
+                                  fff034d3        29   func ,g         1
+  _Interrupt_NMI
+                                  fff034fc        29   func ,g         1
+  _Dummy
+                                  fff03525         1   func ,g         6
+FILE=.\src\dcmotor\i_src\Interrupt_MTU2.obj
+                                  fff03526  fff0366d       148
+  _Interrupt_MTU4_TGIC4
+                                  fff03526        29   func ,g         0
+  _Interrupt_MTU4_TGID4
+                                  fff0354f        29   func ,g         0
+  _Interrupt_MTU0_TGIE0
+                                  fff03578        29   func ,g         0
+  _Interrupt_MTU0_TGIF0
+                                  fff035a1        29   func ,g         0
+  _Interrupt_MTU4_TCIV4
+                                  fff035ca        29   func ,g         0
+  _Interrupt_MTU5_TGIU5
+                                  fff035f3        29   func ,g         0
+  _Interrupt_MTU5_TGIV5
+                                  fff0361c        29   func ,g         0
+  _Interrupt_MTU5_TGIW5
+                                  fff03645        29   func ,g         0
+FILE=.\src\dcmotor\i_src\Interrupt_MTU2_TPU.obj
+                                  fff0366e  fff0397d       310
+  _Interrupt_MTU0_TGIA0_and_TPU6_TGI6A
+                                  fff0366e        38   func ,g         0
+  _Interrupt_MTU1_TGIA1_and_TPU7_TGI7A
+                                  fff036a6        38   func ,g         0
+  _Interrupt_MTU2_TGIA2_and_TPU8_TGI8A
+                                  fff036de        38   func ,g         0
+  _Interrupt_MTU3_TGIA3_and_TPU9_TGI9A
+                                  fff03716        38   func ,g         0
+  _Interrupt_MTU4_TGIA4_and_TPU10_TGI10A
+                                  fff0374e        38   func ,g         0
+  _Interrupt_MTU0_TGIB0a_and_TPU6_TGI6B
+                                  fff03786        38   func ,g         0
+  _Interrupt_MTU1_TGIB1_and_TPU7_TGI7B
+                                  fff037be        38   func ,g         0
+  _Interrupt_MTU2_TGIB2_and_TPU8_TGI8B
+                                  fff037f6        38   func ,g         0
+  _Interrupt_MTU3_TGIB3_and_TPU9_TGI9B
+                                  fff0382e        38   func ,g         0
+  _Interrupt_MTU4_TGIB4_and_TPU10_TGI10B
+                                  fff03866        38   func ,g         0
+  _Interrupt_MTU0_TGIC0_and_TPU6_TGI6C
+                                  fff0389e        38   func ,g         0
+  _Interrupt_MTU3_TGIC3_and_TPU9_TGI9C
+                                  fff038d6        38   func ,g         0
+  _Interrupt_MTU0_TGID0_and_TPU6_TGI6D
+                                  fff0390e        38   func ,g         0
+  _Interrupt_MTU3_TGID3_and_TPU9_TGI9D
+                                  fff03946        38   func ,g         0
+FILE=.\src\dcmotor\i_src\Interrupt_SCI.obj
+                                  fff0397e  fff06018      269b
+  _Interrupt_SCI0_RXI0
+                                  fff0397e       215   func ,g         0
+  _Interrupt_SCI1_RXI1
+                                  fff03b93       218   func ,g         0
+  _Interrupt_SCI2_RXI2
+                                  fff03dab       222   func ,g         0
+  _Interrupt_SCI3_RXI3
+                                  fff03fcd       229   func ,g         0
+  _Interrupt_SCI5_RXI5
+                                  fff041f6       22d   func ,g         0
+  _Interrupt_SCI6_RXI6
+                                  fff04423       22d   func ,g         0
+  _Interrupt_SCI8_RXI8
+                                  fff04650       22d   func ,g         0
+  _Interrupt_SCI9_RXI9
+                                  fff0487d       22d   func ,g         0
+  _Interrupt_SCI12_RXI12
+                                  fff04aaa       232   func ,g         0
+  _Interrupt_SCI0_TXI0
+                                  fff04cdc       174   func ,g         0
+  _Interrupt_SCI1_TXI1
+                                  fff04e50       177   func ,g         0
+  _Interrupt_SCI2_TXI2
+                                  fff04fc7       17f   func ,g         0
+  _Interrupt_SCI3_TXI3
+                                  fff05146       184   func ,g         0
+  _Interrupt_SCI5_TXI5
+                                  fff052ca       185   func ,g         0
+  _Interrupt_SCI6_TXI6
+                                  fff0544f       185   func ,g         0
+  _Interrupt_SCI8_TXI8
+                                  fff055d4       185   func ,g         0
+  _Interrupt_SCI9_TXI9
+                                  fff05759       185   func ,g         0
+  _Interrupt_SCI12_TXI12
+                                  fff058de       18d   func ,g         0
+  _Interrupt_SCI0_TEI0
+                                  fff05a6b        a0   func ,g         0
+  _Interrupt_SCI1_TEI1
+                                  fff05b0b        a0   func ,g         0
+  _Interrupt_SCI2_TEI2
+                                  fff05bab        a2   func ,g         0
+  _Interrupt_SCI3_TEI3
+                                  fff05c4d        a2   func ,g         0
+  _Interrupt_SCI5_TEI5
+                                  fff05cef        a2   func ,g         0
+  _Interrupt_SCI6_TEI6
+                                  fff05d91        a2   func ,g         0
+  _Interrupt_SCI8_TEI8
+                                  fff05e33        a2   func ,g         0
+  _Interrupt_SCI9_TEI9
+                                  fff05ed5        a2   func ,g         0
+  _Interrupt_SCI12_TEI12
+                                  fff05f77        a2   func ,g         0
+FILE=.\src\dcmotor\i_src\Interrupt_TMR.obj
+                                  fff06019  fff062bc       2a4
+  _Interrupt_TMR0_CMA
+                                  fff06019        29   func ,g         0
+  _Interrupt_TMR0_CMB
+                                  fff06042        61   func ,g         0
+  _Interrupt_TMR0_OV
+                                  fff060a3        29   func ,g         0
+  _Interrupt_TMR1_CMA
+                                  fff060cc        29   func ,g         0
+  _Interrupt_TMR1_CMB
+                                  fff060f5        4d   func ,g         0
+  _Interrupt_TMR1_OV
+                                  fff06142        29   func ,g         0
+  _Interrupt_TMR2_CMA
+                                  fff0616b        29   func ,g         0
+  _Interrupt_TMR2_CMB
+                                  fff06194        61   func ,g         0
+  _Interrupt_TMR2_OV
+                                  fff061f5        29   func ,g         0
+  _Interrupt_TMR3_CMA
+                                  fff0621e        29   func ,g         0
+  _Interrupt_TMR3_CMB
+                                  fff06247        4d   func ,g         0
+  _Interrupt_TMR3_OV
+                                  fff06294        29   func ,g         0
+FILE=sprintf
+                                  fff062bd  fff06313        57
+  _prout
+                                  fff062bd        1b   func ,l         1
+  _sprintf
+                                  fff062d8        3c   func ,g         1
+FILE=__COM_DIVd
+                                  fff06314  fff064f0       1dd
+  exception1
+                                  fff06314         0   none ,l         1
+  exception2
+                                  fff06323         0   none ,l         1
+  exception3
+                                  fff0632b         0   none ,l         1
+  normalize1
+                                  fff0633e         0   none ,l         1
+  p1_norm_loop
+                                  fff06349         0   none ,l         1
+  exception4
+                                  fff0637f         0   none ,l         1
+  normalize2
+                                  fff06385         0   none ,l         0
+  p2_norm_loop
+                                  fff06390         0   none ,l         1
+  return_zero
+                                  fff063bd         0   none ,l         4
+  return_inf
+                                  fff063c8         0   none ,l         3
+  return_NaN
+                                  fff063db         0   none ,l         4
+  __COM_DIVd
+                                  fff063e6         0   none ,g        1a
+  exception_return3
+                                  fff0641a         0   none ,l         5
+  exception_return4
+                                  fff0641f         0   none ,l         5
+  div_loop
+                                  fff06440         0   none ,l         2
+  man_sub
+                                  fff06453         0   none ,l         1
+  over_sub
+                                  fff0645e         0   none ,l         1
+  end_man_cal
+                                  fff06466         0   none ,l         1
+  end_sticky_cal
+                                  fff0646b         0   none ,l         1
+  end_norm
+                                  fff06479         0   none ,l         1
+  denormalize_loop
+                                  fff06486         0   none ,l         1
+  next_loop
+                                  fff0648e         0   none ,l         1
+  round_denormal
+                                  fff06496         0   none ,l         1
+  end_round_d
+                                  fff064b0         0   none ,l         4
+  end_denormal
+                                  fff064b2         0   none ,l         1
+  end_denormal_0
+                                  fff064c2         0   none ,l         1
+  return_value
+                                  fff064d0         0   none ,l         1
+  end_round
+                                  fff064d0         0   none ,l         3
+  return
+                                  fff064ea         0   none ,l         0
+FILE=__COM_CONV32ud
+                                  fff064f1  fff0652e        3e
+  __COM_CONV32ud
+                                  fff064f1         0   none ,g        15
+  next_8
+                                  fff06503         0   none ,l         1
+  next_4
+                                  fff0650b         0   none ,l         1
+  next_2
+                                  fff06513         0   none ,l         1
+  next_1
+                                  fff0651b         0   none ,l         1
+  next_0
+                                  fff06523         0   none ,l         1
+  pack
+                                  fff06525         0   none ,l         0
+  return
+                                  fff0652e         0   none ,l         1
+FILE=__initsct
+                                  fff0652f  fff06578        4a
+  __INITSCT
+                                  fff0652f         0   none ,g         1
+  loop1
+                                  fff06541         0   none ,l         1
+  next_loop1
+                                  fff0654f         0   none ,l         2
+  loop3
+                                  fff06561         0   none ,l         1
+  next_loop3
+                                  fff06572         0   none ,l         2
+FILE=R_CGC_ControlAll
+                                  fff06579  fff06ae1       569
+  _R_CGC_ControlAll
+                                  fff06579       569   func ,g         c
+FILE=R_CGC_GetStatusAll
+                                  fff06ae2  fff06b2e        4d
+  _R_CGC_GetStatusAll
+                                  fff06ae2        4d   func ,g         4
+FILE=R_CGC_SetAll
+                                  fff06b2f  fff07422       8f4
+  _R_CGC_SetAll
+                                  fff06b2f       755   func ,g         8
+  _Find_Divider_Setting
+                                  fff07284        77   func ,l         7
+  _Select_Sub_Waiting_Time
+                                  fff072fb        c0   func ,l         1
+  _rpdl_CGC_RTC_ColdStartInit
+                                  fff073bb        68   func ,l         1
+FILE=R_IO_PORT_NotAvailableAll
+                                  fff07423  fff0758b       169
+  _R_IO_PORT_NotAvailableAll
+                                  fff07423       169   func ,g         1
+FILE=R_IO_PORT_ReadDataAll
+                                  fff0758c  fff075ba        2f
+  _R_IO_PORT_ReadDataAll
+                                  fff0758c        2f   func ,g         e
+FILE=R_IO_PORT_ReadDataRegisterAll
+                                  fff075bb  fff075d6        1c
+  _R_IO_PORT_ReadDataRegisterAll
+                                  fff075bb        1c   func ,g         2
+FILE=R_IO_PORT_SetAll
+                                  fff075d7  fff07910       33a
+  _R_IO_PORT_SetAll
+                                  fff075d7       33a   func ,g         c
+FILE=R_IO_PORT_WriteAll
+                                  fff07911  fff0794c        3c
+  _R_IO_PORT_WriteAll
+                                  fff07911        3c   func ,g         6
+FILE=R_IO_PORT_WriteRegisterAll
+                                  fff0794d  fff07974        28
+  _R_IO_PORT_WriteRegisterAll
+                                  fff0794d        28   func ,g         2
+FILE=R_LPC_ControlAll
+                                  fff07975  fff07b46       1d2
+  _R_LPC_ControlAll
+                                  fff07975       1d2   func ,g         6
+FILE=R_LPC_CreateAll
+                                  fff07b47  fff0838b       845
+  _R_LPC_CreateAll
+                                  fff07b47       4f7   func ,g         1
+  _IRQ_Configure
+                                  fff0803e       34e   func ,l         1
+FILE=R_LPC_GetStatusAll
+                                  fff0838c  fff08405        7a
+  _R_LPC_GetStatusAll
+                                  fff0838c        7a   func ,g         4
+FILE=R_MTU2_ControlChannelAll
+                                  fff08406  fff086e9       2e4
+  _R_MTU2_ControlChannelAll
+                                  fff08406       2e4   func ,g         c
+FILE=R_MTU2_ControlUnitAll
+                                  fff086ea  fff08fd3       8ea
+  _R_MTU2_ControlUnitAll
+                                  fff086ea       8ea   func ,g         1
+FILE=R_MTU2_CreateAll
+                                  fff08fd4  fff0ad8c      1db9
+  _R_MTU2_CreateAll
+                                  fff08fd4      1db9   func ,g         2
+FILE=R_MTU2_DestroyAll
+                                  fff0ad8d  fff0ade1        55
+  _R_MTU2_DestroyAll
+                                  fff0ad8d        55   func ,g         1
+FILE=R_MTU2_ReadChannelAll
+                                  fff0ade2  fff0b1d6       3f5
+  _R_MTU2_ReadChannelAll
+                                  fff0ade2       3f5   func ,g         6
+FILE=R_MTU2_SetAll
+                                  fff0b1d7  fff0c0e5       f0f
+  _R_MTU2_SetAll
+                                  fff0b1d7       f0f   func ,g         2
+FILE=R_SCI_ControlAll
+                                  fff0c0e6  fff0c252       16d
+  _R_SCI_ControlAll
+                                  fff0c0e6       16d   func ,g         2
+FILE=R_SCI_CreateAll
+                                  fff0c253  fff0d58e      133c
+  _R_SCI_CreateAll
+                                  fff0c253        5c   func ,g         1
+  _R_SCI_CreateAsyncAll
+                                  fff0c2af       17c   func ,g         1
+  _R_SCI_CreateSyncAll
+                                  fff0c42b       136   func ,g         1
+  _Create_SPI
+                                  fff0c561        4f   func ,l         1
+  _Create_IIC
+                                  fff0c5b0       296   func ,l         1
+  _R_SCI_CreateSmartAll
+                                  fff0c846       1b7   func ,g         1
+  _R_SCI_CreateCommon
+                                  fff0c9fd       2df   func ,l         5
+  _CreateAsync_Pins
+                                  fff0ccdc        5e   func ,l         1
+  _CreateSync_Pins
+                                  fff0cd3a        55   func ,l         1
+  _CreateSPI_Pins
+                                  fff0cd8f        3f   func ,l         1
+  _CreateIIC_Pins
+                                  fff0cdce       253   func ,l         2
+  _CreateSmart_Pins
+                                  fff0d021        28   func ,l         1
+  _Create_Pins_SCK
+                                  fff0d049       154   func ,l         4
+  _Create_Pins_CTS_RTS_SS
+                                  fff0d19d       13b   func ,l         3
+  _Create_Pins_RXD
+                                  fff0d2d8       163   func ,l         5
+  _Create_Pins_TXD
+                                  fff0d43b       154   func ,l         4
+FILE=R_SCI_DestroyAll
+                                  fff0d58f  fff0d7c5       237
+  _R_SCI_DestroyAll
+                                  fff0d58f       237   func ,g         1
+FILE=R_SCI_GetStatusAll
+                                  fff0d7c6  fff0d891        cc
+  _R_SCI_GetStatusAll
+                                  fff0d7c6        cc   func ,g         4
+FILE=R_SCI_IIC
+                                  fff0d892  fff0e001       770
+  _R_SCI_IIC_WriteAll
+                                  fff0d892       177   func ,g         0
+  _R_SCI_IIC_ReadAll
+                                  fff0da09       1fe   func ,g         0
+  _Transfer_Common
+                                  fff0dc07        8d   func ,l         2
+  _R_SCI_IIC_ReadLastByteAll
+                                  fff0dc94        9c   func ,g         0
+  _rpdl_SCI_IIC_Stop
+                                  fff0dd30        15   func ,g         1
+  _R_SCI_IIC_Handler_RXI
+                                  fff0dd45        ae   func ,g         9
+  _R_SCI_IIC_Handler_TXI
+                                  fff0ddf3        b2   func ,g         9
+  _StartConditionWait
+                                  fff0dea5        4c   func ,l         2
+  _StopConditionWait
+                                  fff0def1        64   func ,l         6
+  _SlaveAddressWait
+                                  fff0df55        ad   func ,l         2
+FILE=R_SCI_ReceiveAll
+                                  fff0e002  fff0e3c2       3c1
+  _R_SCI_ReceiveAll
+                                  fff0e002        95   func ,g         1
+  _R_SCI_ReceiveStationID
+                                  fff0e097       132   func ,g         1
+  _R_SCI_ReceiveData
+                                  fff0e1c9       1fa   func ,g         1
+FILE=R_SCI_SendAll
+                                  fff0e3c3  fff0e6f7       335
+  _R_SCI_SendAll
+                                  fff0e3c3        31   func ,g         1
+  _R_SCI_SendStationID
+                                  fff0e3f4        b8   func ,g         1
+  _R_SCI_SendData
+                                  fff0e4ac       24c   func ,g         1
+FILE=R_SCI_SetAll
+                                  fff0e6f8  fff0f114       a1d
+  _R_SCI_SetAll
+                                  fff0e6f8       a1d   func ,g         1
+FILE=R_TMR_ControlUnitAll
+                                  fff0f115  fff0f188        74
+  _R_TMR_ControlUnitAll
+                                  fff0f115        74   func ,g         3
+FILE=R_TMR_CreateUnitAll
+                                  fff0f189  fff0f643       4bb
+  _R_TMR_CreateUnitAll
+                                  fff0f189       4bb   func ,g         1
+FILE=R_TMR_DestroyAll
+                                  fff0f644  fff0f6d6        93
+  _R_TMR_DestroyAll
+                                  fff0f644        93   func ,g         1
+FILE=R_TMR_ReadUnitAll
+                                  fff0f6d7  fff0f780        aa
+  _R_TMR_ReadUnitAll
+                                  fff0f6d7        aa   func ,g         2
+FILE=R_TMR_SetAll
+                                  fff0f781  fff0fc99       519
+  _R_TMR_SetAll
+                                  fff0f781       519   func ,g         1
+FILE=utilities_ADC_10
+                                  fff0fc9a  fff0fcca        31
+  _rpdl_ADC_10_Start
+                                  fff0fc9a        10   func ,g         2
+  _rpdl_ADC_10_ModifyIEN
+                                  fff0fcaa        21   func ,g         0
+FILE=utilities_common
+                                  fff0fccb  fff10083       3b9
+  _rpdl_common_BCD8_check
+                                  fff0fccb        19   func ,g         0
+  _rpdl_common_BCD16_check
+                                  fff0fce4        19   func ,g         0
+  _rpdl_common_BCD32_check
+                                  fff0fcfd        13   func ,g         0
+  _rpdl_BCD8_to_dec
+                                  fff0fd10        12   func ,g         0
+  _rpdl_BCD16_to_dec
+                                  fff0fd22        2e   func ,g         0
+  _rpdl_register_protection
+                                  fff0fd50        2d   func ,g        32
+  _rpdl_modify_protection
+                                  fff0fd7d       10e   func ,g         2
+  _rpdl_bit_number
+                                  fff0fe8b        15   func ,g         0
+  _rpdl_pin_function_prepare
+                                  fff0fea0        3e   func ,g        5a
+  _rpdl_pin_function_disable
+                                  fff0fede        3c   func ,g        b5
+  _rpdl_pin_analog_enable
+                                  fff0ff1a        35   func ,g         0
+  _rpdl_pin_analog_disable
+                                  fff0ff4f        32   func ,g         0
+  _rpdl_wait_source_clock
+                                  fff0ff81        46   func ,g         0
+  _rpdl_wait_time
+                                  fff0ffc7        a8   func ,g         e
+  _rpdl_In_ROM_Program_Erase_Mode
+                                  fff1006f        15   func ,g         3
+FILE=utilities_MTU2
+                                  fff10084  fff1054f       4cc
+  _R_MTU2_Create_load_defaults
+                                  fff10084        3b   func ,g         2
+  _rpdl_MTU2_DisableIER
+                                  fff100bf       15a   func ,g         2
+  _rpdl_MTU2_EnableTGRAIER
+                                  fff10219        86   func ,g         1
+  _rpdl_MTU2_EnableTGRBIER
+                                  fff1029f        86   func ,g         1
+  _rpdl_MTU2_EnableTGRCIER
+                                  fff10325        52   func ,g         1
+  _rpdl_MTU2_EnableTGRDIER
+                                  fff10377        52   func ,g         1
+  _rpdl_MTU2_EnableTGREIER
+                                  fff103c9        1c   func ,g         1
+  _rpdl_MTU2_EnableTGRFIER
+                                  fff103e5        1c   func ,g         1
+  _rpdl_MTU2_EnableTGRUIER
+                                  fff10401        1c   func ,g         1
+  _rpdl_MTU2_EnableTGRVIER
+                                  fff1041d        1c   func ,g         1
+  _rpdl_MTU2_EnableTGRWIER
+                                  fff10439        1c   func ,g         1
+  _rpdl_MTU2_EnableTCIVIER
+                                  fff10455        b0   func ,g         1
+  _rpdl_MTU2_EnableTCIUIER
+                                  fff10505        4b   func ,g         1
+FILE=utilities_SCI
+                                  fff10550  fff11137       be8
+  _rpdl_SCI_SetIdleOutputState
+                                  fff10550       1da   func ,g         3
+  _rpdl_SCI_SetTxPinGeneralIO
+                                  fff1072a       205   func ,g        10
+  _rpdl_SCI_ReadRXD
+                                  fff1092f       1dd   func ,g         1
+  _rpdl_SCI_ModifyTx_IER
+                                  fff10b0c       117   func ,g        15
+  _rpdl_SCI_ModifyTxEnd_IER
+                                  fff10c23       117   func ,g        10
+  _rpdl_SCI_ModifyRxIER
+                                  fff10d3a       220   func ,g         8
+  _rpdl_SCI_EnableReception
+                                  fff10f5a        b4   func ,g         4
+  _rpdl_SCI_EnableTransmission
+                                  fff1100e        78   func ,g         2
+  _rpdl_SCI_Initialise_Smart
+                                  fff11086        b2   func ,g         2
+FILE=xprintf
+                                  fff11138  fff1159a       463
+  __Printf
+                                  fff11138       463   func ,g         1
+FILE=__COM_ADDd_SUBd
+                                  fff1159b  fff1177d       1e3
+  __COM_SUBd
+                                  fff1159b         0   none ,g         6
+  __COM_ADDd
+                                  fff1159e         0   none ,g         0
+  swap
+                                  fff115bd         0   none ,l         1
+  swap_end
+                                  fff115c5         0   none ,l         2
+  x_normal
+                                  fff115e0         0   none ,l         1
+  after_shift
+                                  fff11612         0   none ,l         2
+  round1
+                                  fff11620         0   none ,l         5
+  return_x_asis
+                                  fff1163d         0   none ,l         1
+  pack
+                                  fff1163f         0   none ,l         1
+  pack_sign
+                                  fff11643         0   none ,l         4
+  inf_or_nan
+                                  fff1164c         0   none ,l         1
+  return_nan
+                                  fff1165b         0   none ,l         1
+  zero_or_den
+                                  fff11666         0   none ,l         1
+  add_ovf
+                                  fff1167c         0   none ,l         1
+  return_inf
+                                  fff1168d         0   none ,l         2
+  subtract
+                                  fff1169b         0   none ,l         1
+  sub_underflow
+                                  fff116af         0   none ,l         2
+  normalize1
+                                  fff116c1         0   none ,l         1
+  normalize2
+                                  fff116d3         0   none ,l         1
+  normalize3
+                                  fff116e6         0   none ,l         1
+  normalize4
+                                  fff116f8         0   none ,l         1
+  normalize_1bit_shift
+                                  fff116ff         0   none ,l         1
+  normalize5
+                                  fff11707         0   none ,l         1
+  den_shift_more_than_32
+                                  fff1172e         0   none ,l         1
+  shift_end
+                                  fff1173e         0   none ,l         1
+  sub_underflow1
+                                  fff11743         0   none ,l         1
+  denormal
+                                  fff11759         0   none ,l         1
+  return
+                                  fff1176c         0   none ,l         1
+  x_normal_preparation
+                                  fff1176f         0   none ,l         1
+  den_add
+                                  fff11776         0   none ,l         1
+FILE=__COM_CMPGEd
+                                  fff1177e  fff117f5        78
+  __COM_CMPGEd
+                                  fff1177e         0   none ,g         2
+  exception_return1
+                                  fff1179e         0   none ,l         1
+  exception_return2
+                                  fff117a2         0   none ,l         1
+  exception_return3
+                                  fff117a6         0   none ,l         3
+  minus
+                                  fff117bd         0   none ,l         1
+  sign_def
+                                  fff117cb         0   none ,l         1
+  exception1
+                                  fff117d3         0   none ,l         1
+  exception2
+                                  fff117dc         0   none ,l         1
+  exception3
+                                  fff117e5         0   none ,l         1
+FILE=__COM_CMPGTd
+                                  fff117f6  fff11869        74
+  __COM_CMPGTd
+                                  fff117f6         0   none ,g        17
+  exception_return1
+                                  fff11816         0   none ,l         1
+  exception_return2
+                                  fff1181a         0   none ,l         1
+  exception_return3
+                                  fff1181e         0   none ,l         3
+  minus
+                                  fff11834         0   none ,l         1
+  sign_def
+                                  fff1183f         0   none ,l         1
+  exception1
+                                  fff11847         0   none ,l         1
+  exception2
+                                  fff11850         0   none ,l         1
+  exception3
+                                  fff11859         0   none ,l         1
+FILE=__COM_CMPLEd
+                                  fff1186a  fff118e1        78
+  __COM_CMPLEd
+                                  fff1186a         0   none ,g         f
+  exception_return1
+                                  fff1188a         0   none ,l         1
+  exception_return2
+                                  fff1188e         0   none ,l         1
+  exception_return3
+                                  fff11892         0   none ,l         3
+  minus
+                                  fff118a9         0   none ,l         1
+  sign_def
+                                  fff118b7         0   none ,l         1
+  return
+                                  fff118bc         0   none ,l         0
+  exception1
+                                  fff118bf         0   none ,l         1
+  exception2
+                                  fff118c8         0   none ,l         1
+  exception3
+                                  fff118d1         0   none ,l         1
+FILE=__COM_CMPLTd
+                                  fff118e2  fff11955        74
+  __COM_CMPLTd
+                                  fff118e2         0   none ,g        15
+  exception_return1
+                                  fff11902         0   none ,l         1
+  exception_return2
+                                  fff11906         0   none ,l         1
+  exception_return3
+                                  fff1190a         0   none ,l         3
+  minus
+                                  fff11920         0   none ,l         1
+  sign_def
+                                  fff1192b         0   none ,l         1
+  return
+                                  fff11930         0   none ,l         0
+  exception1
+                                  fff11933         0   none ,l         1
+  exception2
+                                  fff1193c         0   none ,l         1
+  exception3
+                                  fff11945         0   none ,l         1
+FILE=__COM_CONVd32
+                                  fff11956  fff119a8        53
+  __COM_CONVd32u
+                                  fff11956         0   none ,g         c
+  __COM_CONVd32s
+                                  fff11959         0   none ,g         2
+  unpack
+                                  fff1195c         0   none ,l         1
+  return
+                                  fff11981         0   none ,l         1
+  return_zero
+                                  fff11982         0   none ,l         1
+  exp_over30
+                                  fff11985         0   none ,l         1
+  exp_over31
+                                  fff11987         0   none ,l         0
+  exp_equal31
+                                  fff11996         0   none ,l         1
+FILE=__COM_MULd
+                                  fff119a9  fff11b36       18e
+  __COM_MULd
+                                  fff119a9         0   none ,g         4
+  x_normal
+                                  fff119e3         0   none ,l         2
+  muld_msb_one
+                                  fff11a21         0   none ,l         1
+  round1
+                                  fff11a30         0   none ,l         1
+  y_is_inf_or_nan
+                                  fff11a50         0   none ,l         1
+  x_is_inf_or_nan
+                                  fff11a58         0   none ,l         1
+  return_inf
+                                  fff11a66         0   none ,l         2
+  y_is_not_inf_or_nan
+                                  fff11a73         0   none ,l         1
+  return_nan
+                                  fff11a79         0   none ,l         2
+  x_is_zero_or_den
+                                  fff11a84         0   none ,l         1
+  y_is_zero_or_den
+                                  fff11a8d         0   none ,l         1
+  return_zero
+                                  fff11a91         0   none ,l         2
+  denormal
+                                  fff11a98         0   none ,l         1
+  normalize2
+                                  fff11aaf         0   none ,l         2
+  normalize3
+                                  fff11ac1         0   none ,l         1
+  normalize4
+                                  fff11ad3         0   none ,l         1
+  normalize5
+                                  fff11ae6         0   none ,l         1
+  normalize6
+                                  fff11af8         0   none ,l         1
+  return_denormal
+                                  fff11b0a         0   none ,l         1
+  den_minus32_or_more
+                                  fff11b32         0   none ,l         1
+FILE=utilities_CGC
+                                  fff11b37  fff11b56        20
+  _rpdl_CGC_MinimumDivision
+                                  fff11b37        20   func ,g         1
+FILE=utilities_IO_PORT
+                                  fff11b57  fff11ba0        4a
+  _rpdl_IO_PORT_Port_Exists
+                                  fff11b57        17   func ,g         8
+  _rpdl_IO_PORT_OpenDrain_Exists
+                                  fff11b6e         4   func ,g         1
+  _rpdl_IO_PORT_PullUp_Exists
+                                  fff11b72         4   func ,g         1
+  _rpdl_IO_PORT_Drive_Exists
+                                  fff11b76        2b   func ,g         1
+FILE=utilities_LPC
+                                  fff11ba1  fff11cd0       130
+  _rpdl_LPC_SetOperatingMode
+                                  fff11ba1        71   func ,g         2
+  _LPC_CheckClocksInRange
+                                  fff11c12        bf   func ,l         2
+FILE=utilities_TMR
+                                  fff11cd1  fff11e98       1c8
+  _rpdl_TMR_DisableIER
+                                  fff11cd1        84   func ,g         2
+  _rpdl_TMR_EnableOVIER
+                                  fff11d55        6c   func ,g         1
+  _rpdl_TMR_EnableCMAIER
+                                  fff11dc1        6c   func ,g         1
+  _rpdl_TMR_EnableCMBIER
+                                  fff11e2d        6c   func ,g         1
+FILE=xputfld
+                                  fff11e99  fff12681       7e9
+  __Putfld
+                                  fff11e99       7e9   func ,g         2
+FILE=xvacopy
+                                  fff12682  fff1269e        1d
+  __Vacopy
+                                  fff12682        1d   func ,g         2
+FILE=xputtxt
+                                  fff1269f  fff12a6b       3cd
+  __Puttxt
+                                  fff1269f       3cd   func ,g         3
+FILE=strchr
+                                  fff12a6c  fff12a99        2e
+  _strchr
+                                  fff12a6c        2e   func ,g         2
+FILE=xctype
+                                  fff12a9a  fff12ac7        2e
+  __Getpctype
+                                  fff12a9a        2e   func ,g         0
+FILE=xldtob
+                                  fff12ac8  fff1315f       698
+  __Ldtob
+                                  fff12ac8       698   func ,g         1
+FILE=xputstr
+                                  fff13160  fff132b6       157
+  __Putstr
+                                  fff13160       157   func ,g         2
+FILE=xlitob
+                                  fff132b7  fff134df       229
+  __Litob
+                                  fff132b7       229   func ,g         3
+FILE=xgenld
+                                  fff134e0  fff1398e       4af
+  __Genld
+                                  fff134e0       4af   func ,g         1
+FILE=xwctomb
+                                  fff1398f  fff13c0b       27d
+  __Wctombx
+                                  fff1398f       1f2   func ,g         1
+  __Wctomb
+                                  fff13b81        8b   func ,g         1
+FILE=xstate
+                                  fff13c0c  fff13c65        5a
+  __Getmbcurmax
+                                  fff13c0c        2e   func ,g         2
+  __Getpmbstate
+                                  fff13c3a        2c   func ,g         0
+FILE=xldscale
+                                  fff13c66  fff13c79        14
+  __LDscale
+                                  fff13c66        14   func ,g         1
+FILE=xldunsca
+                                  fff13c7a  fff13c8d        14
+  __LDunscale
+                                  fff13c7a        14   func ,g         1
+FILE=__COM_DIV64u
+                                  fff13c8e  fff13d26        99
+  __COM_DIV64u
+                                  fff13c8e         0   none ,g         2
+  _Loop_Init
+                                  fff13c98         0   none ,l         2
+  _Loop
+                                  fff13ca0         0   none ,l         1
+  _DivStart
+                                  fff13cac         0   none ,l         3
+  _Success
+                                  fff13cba         0   none ,l         1
+  _DivEnd
+                                  fff13cc6         0   none ,l         0
+  IXI6DIV
+                                  fff13ccb         0   none ,l         1
+  IXI4DIV
+                                  fff13cdd         0   none ,l         1
+  IXI2DIV
+                                  fff13ced         0   none ,l         1
+  I8I2DIV
+                                  fff13cf5         0   none ,l         1
+  I4I2DIV
+                                  fff13d23         0   none ,l         1
+  _i8divU_End
+                                  fff13d26         0   none ,l         0
+FILE=__COM_MOD64u
+                                  fff13d27  fff13dad        87
+  __COM_MOD64u
+                                  fff13d27         0   none ,g         1
+  _Loop_Init
+                                  fff13d31         0   none ,l         2
+  _Loop
+                                  fff13d35         0   none ,l         1
+  _DivStart
+                                  fff13d41         0   none ,l         3
+  _Success
+                                  fff13d4f         0   none ,l         1
+  _DivEnd
+                                  fff13d57         0   none ,l         0
+  IXI6DIV
+                                  fff13d58         0   none ,l         1
+  IXI4DIV
+                                  fff13d6a         0   none ,l         1
+  IXI2DIV
+                                  fff13d7a         0   none ,l         1
+  I8I2DIV
+                                  fff13d82         0   none ,l         1
+  I4I2DIV
+                                  fff13da2         0   none ,l         1
+FILE=_div
+                                  fff13dae  fff13db9         c
+  _ldiv
+                                  fff13dae         0   none ,g         1
+  _div
+                                  fff13dae         0   none ,g         1
+FILE=__COM_CONV32sd
+                                  fff13dba  fff13dfc        43
+  __COM_CONV32sd
+                                  fff13dba         0   none ,g         2
+  exponent_set
+                                  fff13dbf         0   none ,l         0
+  next_8
+                                  fff13dcc         0   none ,l         1
+  next_4
+                                  fff13dd4         0   none ,l         1
+  next_2
+                                  fff13ddc         0   none ,l         1
+  next_1
+                                  fff13de4         0   none ,l         1
+  next_0
+                                  fff13dec         0   none ,l         1
+  pack
+                                  fff13dee         0   none ,l         0
+  return
+                                  fff13dfc         0   none ,l         1
+FILE=free
+                                  fff13dfd  fff13f37       13b
+  _free
+                                  fff13dfd       13b   func ,g         2
+FILE=malloc
+                                  fff13f38  fff140d8       1a1
+  _findmem
+                                  fff13f38        e5   func ,l         1
+  _malloc
+                                  fff1401d        bc   func ,g         1
+FILE=localeco
+                                  fff140d9  fff140e4         c
+  _localeconv
+                                  fff140d9         c   func ,g         1
+FILE=xwcstate
+                                  fff140e5  fff14110        2c
+  __Getpwcstate
+                                  fff140e5        2c   func ,g         0
+FILE=xdscale
+                                  fff14111  fff1441a       30a
+  __Dscale
+                                  fff14111       30a   func ,g         1
+FILE=xdunscal
+                                  fff1441b  fff144dc        c2
+  __Dunscale
+                                  fff1441b        c2   func ,g         1
+FILE=xgetmem
+                                  fff144dd  fff1450e        32
+  __Getmem
+                                  fff144dd        32   func ,g         1
+FILE=xdnorm
+                                  fff1450f  fff1462b       11d
+  __Dnorm
+                                  fff1450f       11d   func ,g         2
+
+SECTION=$ADDR_C_FFFFFF80
+FILE=.\src\dcmotor\i_src\Interrupt_INTC.obj
+                                  ffffff80  ffffff83         4
+  _MDES_register
+                                  ffffff80         4   data ,g         0
+
+SECTION=FIXEDVECT
+FILE=.\src\dcmotor\i_src\Interrupt_INTC.obj
+                                  ffffffd0  ffffffff        30
+  _Fixed_Vectors
+                                  ffffffd0        30   data ,g         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO

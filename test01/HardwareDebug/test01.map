@@ -1,0 +1,1167 @@
+Renesas Optimizing Linker (W2.06.00 )             30-Apr-2018 22:41:47
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./src/dbsct.obj"
+-input="./src/reset_program.obj"
+-input="./src/sbrk.obj"
+-input="./src/test01.obj"
+-input="./src/default/CMT/R_PG_Timer_CMT_U0.obj"
+-input="./src/default/IO/R_PG_IO_PORT.obj"
+-input="./src/default/LPC/R_PG_LPC.obj"
+-input="./src/default/SCI/R_PG_SCI_C0.obj"
+-input="./src/default/SYSTEM/R_PG_Clock.obj"
+-input="./src/default/i_src/Interrupt_CMT.obj"
+-input="./src/default/i_src/Interrupt_INTC.obj"
+-input="./src/default/i_src/Interrupt_SCI.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,P/0FFF00000,FIXEDVECT/0FFFFFFD0
+-library=D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test01\HardwareDebug\test01.lib
+-library=D:\Renesas\PDG2\lib\RX63N\RX63N_library_100_little.lib
+-noprelink
+-list=test01.map
+-show
+-nooptimize
+-debug
+-output=D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\test01\HardwareDebug\test01.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  00000421        1e   1
+R_1
+                                  00000422  00000422         0   1
+B_2
+                                  00000422  00000437        16   2
+R_2
+                                  00000438  0000043f         8   2
+B
+                                  00000440  00000cfb       8bc   4
+R
+                                  00000cfc  00000e4f       154   4
+PResetPRG
+                                  fff00000  fff00030        31   1
+C_1
+                                  fff00031  fff00070        40   1
+C_2
+                                  fff00072  fff00079         8   2
+C
+                                  fff0007c  fff0012f        b4   4
+C$DSEC
+                                  fff00130  fff00153        24   4
+C$BSEC
+                                  fff00154  fff0016b        18   4
+C$INIT
+                                  fff0016c  fff0016c         0   1
+C$VECT
+                                  fff0016c  fff0056b       400   4
+C$VTBL
+                                  fff0056c  fff0056c         0   1
+D
+                                  fff0056c  fff006bf       154   4
+D_1
+                                  fff006c0  fff006c0         0   1
+D_2
+                                  fff006c0  fff006c7         8   2
+W
+                                  fff006c8  fff006c8         0   4
+W_1
+                                  fff006c8  fff006c8         0   1
+W_2
+                                  fff006c8  fff006dd        16   2
+L
+                                  fff006de  fff006de         0   1
+P
+                                  fff006de  fff09059      897c   1
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff83         4   1
+FIXEDVECT
+                                  ffffffd0  ffffffff        30   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\src\reset_program.obj
+                                  00000004  00000103       100
+
+SECTION=SI
+FILE=.\src\reset_program.obj
+                                  00000104  00000403       300
+
+SECTION=B_1
+FILE=globals_CMT
+                                  00000404  00000407         4
+  _rpdl_CMT_one_shot
+                                  00000404         4   data ,g         5
+FILE=globals_INTC
+                                  00000408  00000409         2
+  _rpdl_INTC_brk_command
+                                  00000408         1   data ,g         8
+  _rpdl_INTC_brk_data8
+                                  00000409         1   data ,g         4
+FILE=globals_MTU2
+                                  0000040a  0000040a         1
+  _rpdl_MTU2_tmdr_copy
+                                  0000040a         1   data ,g         0
+FILE=globals_SPI
+                                  0000040b  00000414         a
+  _rpdl_SPI_method
+                                  0000040b         2   data ,g         0
+  _rpdl_SPI_tx_frame_counter
+                                  0000040d         2   data ,g         0
+  _rpdl_SPI_frame_total
+                                  0000040f         2   data ,g         0
+  _rpdl_SPI_rx_frame_counter
+                                  00000411         2   data ,g         0
+  _rpdl_SPI_spcr_copy
+                                  00000413         2   data ,g         0
+FILE=globals_TPU
+                                  00000415  0000041a         6
+  _rpdl_TPU_tgra_dmac_channel
+                                  00000415         6   data ,g         0
+FILE=globals_ADC_10
+                                  0000041b  0000041c         2
+  _rpdl_adcsr0_copy
+                                  0000041b         1   data ,g         1
+  _rpdl_adcr0_copy
+                                  0000041c         1   data ,g         0
+FILE=globals_CGC
+                                  0000041d  00000421         5
+  _rpdl_CGC_bckcr_copy
+                                  0000041d         5   data ,g         2
+
+SECTION=B_2
+FILE=globals_SPI
+                                  00000422  0000042d         c
+  _rpdl_SPI_sequence_count
+                                  00000422         4   data ,g         0
+  _rpdl_SPI_tx_sequence_counter
+                                  00000426         4   data ,g         0
+  _rpdl_SPI_rx_sequence_counter
+                                  0000042a         4   data ,g         0
+FILE=globals_CGC
+                                  0000042e  00000437         a
+  _rpdl_CGC_sckcr2_copy
+                                  0000042e         a   data ,g         2
+
+SECTION=R_2
+FILE=utilities_common
+                                  00000438  0000043f         8
+  _rpdl_RWP_PRCR_enable_counter
+                                  00000438         6   data ,l         6
+  _rpdl_MPC_PWPR_enable_counter
+                                  0000043e         2   data ,l         2
+
+SECTION=B
+FILE=.\src\sbrk.obj
+                                  00000440  0000083f       400
+  _heap_area
+                                  00000440       400   data ,l         2
+FILE=globals_CMT
+                                  00000840  0000084f        10
+  _rpdl_CMT_callback_func
+                                  00000840        10   data ,g         5
+FILE=globals_INTC
+                                  00000850  00000853         4
+  _rpdl_INTC_saved_isp
+                                  00000850         4   data ,g         1
+FILE=globals_MTU2
+                                  00000854  00000913        c0
+  _rpdl_MTU2_func1_callback_func
+                                  00000854        18   data ,g         0
+  _rpdl_MTU2_func2_callback_func
+                                  0000086c        18   data ,g         0
+  _rpdl_MTU2_func3_callback_func
+                                  00000884        18   data ,g         0
+  _rpdl_MTU2_func4_callback_func
+                                  0000089c        18   data ,g         0
+  _rpdl_MTU2_TGRE_callback_func
+                                  000008b4        18   data ,g         0
+  _rpdl_MTU2_TGRF_callback_func
+                                  000008cc        18   data ,g         0
+  _rpdl_MTU2_Overflow_callback_func
+                                  000008e4        18   data ,g         2
+  _rpdl_MTU2_Underflow_callback_func
+                                  000008fc        18   data ,g         2
+FILE=globals_SCI
+                                  00000914  00000b83       270
+  _sci_global
+                                  00000914       270   data ,g        36
+FILE=globals_SPI
+                                  00000b84  00000b93        10
+  _rpdl_SPI_tx_ptr
+                                  00000b84         8   data ,g         0
+  _rpdl_SPI_rx_ptr
+                                  00000b8c         8   data ,g         0
+FILE=globals_ADC_10
+                                  00000b94  00000b97         4
+  _rpdl_ADC_10_callback_func
+                                  00000b94         4   data ,g         0
+FILE=globals_CGC
+                                  00000b98  00000cfb       164
+  _rpdl_CGC_f_iclk
+                                  00000b98         8   data ,g         6
+  _rpdl_CGC_f_pclka
+                                  00000ba0         8   data ,g         2
+  _rpdl_CGC_f_pclkb
+                                  00000ba8         8   data ,g        10
+  _rpdl_CGC_f_fclk
+                                  00000bb0         8   data ,g         4
+  _rpdl_CGC_f_bclk
+                                  00000bb8         8   data ,g         4
+  _rpdl_CGC_f_ieclk
+                                  00000bc0         8   data ,g         2
+  _rpdl_CGC_f_uclk
+                                  00000bc8         8   data ,g         2
+  _rpdl_CGC_f_iclk_storage
+                                  00000bd0        28   data ,g         2
+  _rpdl_CGC_f_pclka_storage
+                                  00000bf8        28   data ,g         2
+  _rpdl_CGC_f_pclkb_storage
+                                  00000c20        28   data ,g         4
+  _rpdl_CGC_f_fclk_storage
+                                  00000c48        28   data ,g         2
+  _rpdl_CGC_f_bclk_storage
+                                  00000c70        28   data ,g         3
+  _rpdl_CGC_f_ieclk_storage
+                                  00000c98        28   data ,g         2
+  _rpdl_CGC_f_uclk_storage
+                                  00000cc0        28   data ,g         2
+  _rpdl_CGC_sckcr_copy
+                                  00000ce8        14   data ,g         2
+
+SECTION=R
+FILE=.\src\sbrk.obj
+                                  00000cfc  00000cff         4
+  _brk
+                                  00000cfc         4   data ,l         1
+FILE=globals_INTC
+                                  00000d00  00000d77        78
+  _rpdl_INTC_callback_func
+                                  00000d00        58   data ,g        16
+  _rpdl_INTC_group_callback_func
+                                  00000d58        20   data ,g         8
+FILE=globals_SPI
+                                  00000d78  00000d87        10
+  _rpdl_SPI_event_callback_func
+                                  00000d78         8   data ,g         0
+  _rpdl_SPI_error_callback_func
+                                  00000d80         8   data ,g         2
+FILE=globals_TPU
+                                  00000d88  00000e17        90
+  _rpdl_TPU_TGRA_callback_func
+                                  00000d88        18   data ,g         0
+  _rpdl_TPU_TGRB_callback_func
+                                  00000da0        18   data ,g         0
+  _rpdl_TPU_TGRC_callback_func
+                                  00000db8        18   data ,g         0
+  _rpdl_TPU_TGRD_callback_func
+                                  00000dd0        18   data ,g         0
+  _rpdl_TPU_Overflow_callback_func
+                                  00000de8        18   data ,g         2
+  _rpdl_TPU_Underflow_callback_func
+                                  00000e00        18   data ,g         2
+FILE=globals_CGC
+                                  00000e18  00000e4f        38
+  _rpdl_CGC_f_source_clock
+                                  00000e18        30   data ,g        12
+  _rpdl_cgc_set_done
+                                  00000e48         4   data ,g         1
+  _rpdl_cgc_pclkb_fchk_en
+                                  00000e4c         4   data ,g         3
+
+SECTION=PResetPRG
+FILE=.\src\reset_program.obj
+                                  fff00000  fff00030        31
+  _PowerON_Reset_PC
+                                  fff00000        31   entry,g         1
+
+SECTION=C_1
+FILE=globals_MTU2
+                                  fff00031  fff00035         5
+  _rpdl_MTU2_TSTR_mask
+                                  fff00031         5   data ,g         0
+FILE=globals_SCI
+                                  fff00036  fff00039         4
+  _rpdl_SCI_div_value
+                                  fff00036         4   data ,g         1
+FILE=globals_TPU
+                                  fff0003a  fff0003f         6
+  _rpdl_TPU_gcr_mask
+                                  fff0003a         6   data ,g         0
+FILE=globals_ADC_10
+                                  fff00040  fff00043         4
+  _rpdl_ADC_10_div_value
+                                  fff00040         4   data ,g         0
+FILE=globals_CGC
+                                  fff00044  fff00070        2d
+  _rpdl_CGC_PLL_divider_values
+                                  fff00044         3   data ,g         1
+  _rpdl_CGC_PLL_multiplier_values
+                                  fff00047         8   data ,g         1
+  _rpdl_CGC_SCKCR_divider_values
+                                  fff0004f         7   data ,g         1
+  _rpdl_CGC_IEBCK_divider_values
+                                  fff00056         d   data ,g         1
+  _rpdl_CGC_UCK_divider_values
+                                  fff00063         4   data ,g         1
+  _rpdl_CGC_SCKCR_offsets
+                                  fff00067         5   data ,g         1
+  _rpdl_CGC_source_f_lookup
+                                  fff0006c         5   data ,g         0
+
+SECTION=C_2
+FILE=globals_CMT
+                                  fff00072  fff00079         8
+  _rpdl_CMT_div_value
+                                  fff00072         8   data ,g         2
+
+SECTION=C
+FILE=.\src\dbsct.obj
+                                  fff0007c  fff000af        34
+  __CTBL
+                                  fff0007c        34   data ,g         0
+FILE=utilities_LPC
+                                  fff000b0  fff0012f        80
+  _LPC_Clock_Range_LowSpeed_1
+                                  fff000b0        40   data ,l         1
+  _LPC_Clock_Range_LowSpeed_2
+                                  fff000f0        40   data ,g         1
+
+SECTION=C$DSEC
+FILE=.\src\dbsct.obj
+                                  fff00130  fff00153        24
+  __DTBL
+                                  fff00130        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\src\dbsct.obj
+                                  fff00154  fff0016b        18
+  __BTBL
+                                  fff00154        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\src\dbsct.obj
+                                  fff0016c  fff0056b       400
+
+SECTION=D
+FILE=.\src\sbrk.obj
+                                  fff0056c  fff0056f         4
+FILE=globals_INTC
+                                  fff00570  fff005e7        78
+FILE=globals_SPI
+                                  fff005e8  fff005f7        10
+FILE=globals_TPU
+                                  fff005f8  fff00687        90
+FILE=globals_CGC
+                                  fff00688  fff006bf        38
+
+SECTION=D_2
+FILE=utilities_common
+                                  fff006c0  fff006c7         8
+
+SECTION=W_2
+FILE=.\src\default\i_src\Interrupt_INTC.obj
+                                  fff006c8  fff006dd        16
+
+SECTION=P
+FILE=.\src\sbrk.obj
+                                  fff006de  fff006fe        21
+  _sbrk
+                                  fff006de        21   func ,g         0
+FILE=.\src\test01.obj
+                                  fff006ff  fff00703         5
+  _main
+                                  fff006ff         1   func ,g         1
+  _Cmt0IntFunc
+                                  fff00700         1   func ,g         1
+  _Sci0TrFunc
+                                  fff00701         1   func ,g         1
+  _Sci0ReFunc
+                                  fff00702         1   func ,g         1
+  _Sci0ErFunc
+                                  fff00703         1   func ,g         1
+FILE=.\src\default\CMT\R_PG_Timer_CMT_U0.obj
+                                  fff00704  fff007a0        9d
+  _R_PG_Timer_Set_CMT_U0_C0
+                                  fff00704        27   func ,g         0
+  _R_PG_Timer_StartCount_CMT_U0_C0
+                                  fff0072b        12   func ,g         0
+  _R_PG_Timer_HaltCount_CMT_U0_C0
+                                  fff0073d        12   func ,g         0
+  _R_PG_Timer_GetCounterValue_CMT_U0_C0
+                                  fff0074f        16   func ,g         0
+  _R_PG_Timer_SetCounterValue_CMT_U0_C0
+                                  fff00765        18   func ,g         0
+  _R_PG_Timer_SetConstantRegister_CMT_U0_C0
+                                  fff0077d        18   func ,g         0
+  _R_PG_Timer_StopModule_CMT_U0
+                                  fff00795         c   func ,g         0
+FILE=.\src\default\IO\R_PG_IO_PORT.obj
+                                  fff007a1  fff007a4         4
+  _R_PG_IO_PORT_SetPortNotAvailable
+                                  fff007a1         4   func ,g         0
+FILE=.\src\default\LPC\R_PG_LPC.obj
+                                  fff007a5  fff008b8       114
+  _R_PG_LPC_Set
+                                  fff007a5        25   func ,g         0
+  _R_PG_LPC_Sleep
+                                  fff007ca         6   func ,g         0
+  _R_PG_LPC_AllModuleClockStop
+                                  fff007d0         7   func ,g         0
+  _R_PG_LPC_DeepSoftwareStandby
+                                  fff007d7         6   func ,g         0
+  _R_PG_LPC_SoftwareStandby
+                                  fff007dd         6   func ,g         0
+  _R_PG_LPC_ChangeOperatingPowerControl
+                                  fff007e3        20   func ,g         0
+  _R_PG_LPC_ChangeSleepModeReturnClock
+                                  fff00803        20   func ,g         0
+  _R_PG_LPC_GetOperatingPowerControlFlag
+                                  fff00823        1e   func ,g         0
+  _R_PG_LPC_GetPowerOnResetFlag
+                                  fff00841        1e   func ,g         0
+  _R_PG_LPC_GetLVDDetectionFlag
+                                  fff0085f        3a   func ,g         0
+  _R_PG_LPC_GetDeepSoftwareStandbyResetFlag
+                                  fff00899        20   func ,g         0
+FILE=.\src\default\SCI\R_PG_SCI_C0.obj
+                                  fff008b9  fff00a21       169
+  _R_PG_SCI_Set_C0
+                                  fff008b9        30   func ,g         0
+  _R_PG_SCI_StartSending_C0
+                                  fff008e9        23   func ,g         0
+  _R_PG_SCI_GetSentDataCount_C0
+                                  fff0090c        24   func ,g         0
+  _R_PG_SCI_StartReceiving_C0
+                                  fff00930        2b   func ,g         0
+  _R_PG_SCI_StopCommunication_C0
+                                  fff0095b         e   func ,g         0
+  _R_PG_SCI_GetReceivedDataCount_C0
+                                  fff00969        24   func ,g         0
+  _R_PG_SCI_GetReceptionErrorFlag_C0
+                                  fff0098d        4a   func ,g         0
+  _R_PG_SCI_ClearReceptionErrorFlag_C0
+                                  fff009d7         f   func ,g         0
+  _R_PG_SCI_GetTransmitStatus_C0
+                                  fff009e6        30   func ,g         0
+  _R_PG_SCI_StopModule_C0
+                                  fff00a16         c   func ,g         0
+FILE=.\src\default\SYSTEM\R_PG_Clock.obj
+                                  fff00a22  fff00e48       427
+  _R_PG_Clock_Set
+                                  fff00a22       14f   func ,g         0
+  _R_PG_Clock_WaitSet
+                                  fff00b71       18b   func ,g         0
+  _R_PG_Clock_Start_LOCO
+                                  fff00cfc         b   func ,g         0
+  _R_PG_Clock_Stop_LOCO
+                                  fff00d07         b   func ,g         0
+  _R_PG_Clock_Start_HOCO
+                                  fff00d12         b   func ,g         0
+  _R_PG_Clock_Stop_HOCO
+                                  fff00d1d         b   func ,g         0
+  _R_PG_Clock_PowerON_HOCO
+                                  fff00d28         c   func ,g         0
+  _R_PG_Clock_PowerOFF_HOCO
+                                  fff00d34         c   func ,g         0
+  _R_PG_Clock_Start_MAIN
+                                  fff00d40         c   func ,g         0
+  _R_PG_Clock_Stop_MAIN
+                                  fff00d4c         c   func ,g         0
+  _R_PG_Clock_Enable_MAIN_ForcedOscillation
+                                  fff00d58         c   func ,g         0
+  _R_PG_Clock_Disable_MAIN_ForcedOscillation
+                                  fff00d64         c   func ,g         0
+  _R_PG_Clock_Start_SUB
+                                  fff00d70         a   func ,g         0
+  _R_PG_Clock_Stop_SUB
+                                  fff00d7a         a   func ,g         0
+  _R_PG_Clock_Start_PLL
+                                  fff00d84         a   func ,g         0
+  _R_PG_Clock_Stop_PLL
+                                  fff00d8e         a   func ,g         0
+  _R_PG_Clock_GetSelectedClockSource
+                                  fff00d98        1d   func ,g         0
+  _R_PG_Clock_GetClocksStatus
+                                  fff00db5        5c   func ,g         0
+  _R_PG_Clock_GetHOCOPowerStatus
+                                  fff00e11        1d   func ,g         0
+  _R_PG_Clock_GetFlag_MAIN_StopDetection
+                                  fff00e2e        1b   func ,g         0
+FILE=.\src\default\i_src\Interrupt_CMT.obj
+                                  fff00e49  fff00f3c        f4
+  _Interrupt_CMT0
+                                  fff00e49        3d   func ,g         0
+  _Interrupt_CMT1
+                                  fff00e86        3d   func ,g         0
+  _Interrupt_CMT2
+                                  fff00ec3        3d   func ,g         0
+  _Interrupt_CMT3
+                                  fff00f00        3d   func ,g         0
+FILE=.\src\default\i_src\Interrupt_INTC.obj
+                                  fff00f3d  fff0169c       760
+  _Interrupt_IRQ0
+                                  fff00f3d        1c   func ,g         0
+  _Interrupt_IRQ1
+                                  fff00f59        1c   func ,g         0
+  _Interrupt_IRQ2
+                                  fff00f75        1c   func ,g         0
+  _Interrupt_IRQ3
+                                  fff00f91        1c   func ,g         0
+  _Interrupt_IRQ4
+                                  fff00fad        1c   func ,g         0
+  _Interrupt_IRQ5
+                                  fff00fc9        1c   func ,g         0
+  _Interrupt_IRQ6
+                                  fff00fe5        1c   func ,g         0
+  _Interrupt_IRQ7
+                                  fff01001        1c   func ,g         0
+  _Interrupt_IRQ8
+                                  fff0101d        1c   func ,g         0
+  _Interrupt_IRQ9
+                                  fff01039        1c   func ,g         0
+  _Interrupt_IRQ10
+                                  fff01055        1c   func ,g         0
+  _Interrupt_IRQ11
+                                  fff01071        1c   func ,g         0
+  _Interrupt_IRQ12
+                                  fff0108d        1c   func ,g         0
+  _Interrupt_IRQ13
+                                  fff010a9        1c   func ,g         0
+  _Interrupt_IRQ14
+                                  fff010c5        1c   func ,g         0
+  _Interrupt_IRQ15
+                                  fff010e1        1c   func ,g         0
+  _Interrupt_Group_0
+                                  fff010fd        1c   func ,g         0
+  _Interrupt_Group_1
+                                  fff01119        74   func ,g         0
+  _Interrupt_Group_2
+                                  fff0118d        74   func ,g         0
+  _Interrupt_Group_3
+                                  fff01201        8d   func ,g         0
+  _Interrupt_Group_4
+                                  fff0128e        8e   func ,g         0
+  _Interrupt_Group_5
+                                  fff0131c        25   func ,g         0
+  _Interrupt_Group_6
+                                  fff01341        25   func ,g         0
+  _Interrupt_Group_12
+                                  fff01366       173   func ,g         0
+  _Interrupt_SWINT
+                                  fff014d9        1c   func ,g         0
+  _Interrupt_BRK
+                                  fff014f5       11b   func ,g         0
+  _Excep_PrivilegedInst
+                                  fff01610        1c   func ,g         1
+  _Excep_Access
+                                  fff0162c        1c   func ,g         1
+  _Excep_UndefinedInst
+                                  fff01648        1c   func ,g         1
+  _Excep_FloatingPoint
+                                  fff01664        1c   func ,g         1
+  _Interrupt_NMI
+                                  fff01680        1c   func ,g         1
+  _Dummy
+                                  fff0169c         1   func ,g         6
+FILE=.\src\default\i_src\Interrupt_SCI.obj
+                                  fff0169d  fff02798      10fc
+  _Interrupt_SCI0_RXI0
+                                  fff0169d        e8   func ,g         0
+  _Interrupt_SCI1_RXI1
+                                  fff01785        eb   func ,g         0
+  _Interrupt_SCI2_RXI2
+                                  fff01870        f2   func ,g         0
+  _Interrupt_SCI3_RXI3
+                                  fff01962        fa   func ,g         0
+  _Interrupt_SCI5_RXI5
+                                  fff01a5c        fe   func ,g         0
+  _Interrupt_SCI6_RXI6
+                                  fff01b5a        fe   func ,g         0
+  _Interrupt_SCI8_RXI8
+                                  fff01c58        fe   func ,g         0
+  _Interrupt_SCI9_RXI9
+                                  fff01d56        fe   func ,g         0
+  _Interrupt_SCI12_RXI12
+                                  fff01e54       103   func ,g         0
+  _Interrupt_SCI0_TXI0
+                                  fff01f57        96   func ,g         0
+  _Interrupt_SCI1_TXI1
+                                  fff01fed        99   func ,g         0
+  _Interrupt_SCI2_TXI2
+                                  fff02086        9e   func ,g         0
+  _Interrupt_SCI3_TXI3
+                                  fff02124        a1   func ,g         0
+  _Interrupt_SCI5_TXI5
+                                  fff021c5        a2   func ,g         0
+  _Interrupt_SCI6_TXI6
+                                  fff02267        a2   func ,g         0
+  _Interrupt_SCI8_TXI8
+                                  fff02309        a2   func ,g         0
+  _Interrupt_SCI9_TXI9
+                                  fff023ab        a2   func ,g         0
+  _Interrupt_SCI12_TXI12
+                                  fff0244d        ab   func ,g         0
+  _Interrupt_SCI0_TEI0
+                                  fff024f8        4a   func ,g         0
+  _Interrupt_SCI1_TEI1
+                                  fff02542        4a   func ,g         0
+  _Interrupt_SCI2_TEI2
+                                  fff0258c        4b   func ,g         0
+  _Interrupt_SCI3_TEI3
+                                  fff025d7        4b   func ,g         0
+  _Interrupt_SCI5_TEI5
+                                  fff02622        4b   func ,g         0
+  _Interrupt_SCI6_TEI6
+                                  fff0266d        4b   func ,g         0
+  _Interrupt_SCI8_TEI8
+                                  fff026b8        4b   func ,g         0
+  _Interrupt_SCI9_TEI9
+                                  fff02703        4b   func ,g         0
+  _Interrupt_SCI12_TEI12
+                                  fff0274e        4b   func ,g         0
+FILE=__COM_DIVd
+                                  fff02799  fff02975       1dd
+  exception1
+                                  fff02799         0   none ,l         1
+  exception2
+                                  fff027a8         0   none ,l         1
+  exception3
+                                  fff027b0         0   none ,l         1
+  normalize1
+                                  fff027c3         0   none ,l         1
+  p1_norm_loop
+                                  fff027ce         0   none ,l         1
+  exception4
+                                  fff02804         0   none ,l         1
+  normalize2
+                                  fff0280a         0   none ,l         0
+  p2_norm_loop
+                                  fff02815         0   none ,l         1
+  return_zero
+                                  fff02842         0   none ,l         4
+  return_inf
+                                  fff0284d         0   none ,l         3
+  return_NaN
+                                  fff02860         0   none ,l         4
+  __COM_DIVd
+                                  fff0286b         0   none ,g        1b
+  exception_return3
+                                  fff0289f         0   none ,l         5
+  exception_return4
+                                  fff028a4         0   none ,l         5
+  div_loop
+                                  fff028c5         0   none ,l         2
+  man_sub
+                                  fff028d8         0   none ,l         1
+  over_sub
+                                  fff028e3         0   none ,l         1
+  end_man_cal
+                                  fff028eb         0   none ,l         1
+  end_sticky_cal
+                                  fff028f0         0   none ,l         1
+  end_norm
+                                  fff028fe         0   none ,l         1
+  denormalize_loop
+                                  fff0290b         0   none ,l         1
+  next_loop
+                                  fff02913         0   none ,l         1
+  round_denormal
+                                  fff0291b         0   none ,l         1
+  end_round_d
+                                  fff02935         0   none ,l         4
+  end_denormal
+                                  fff02937         0   none ,l         1
+  end_denormal_0
+                                  fff02947         0   none ,l         1
+  return_value
+                                  fff02955         0   none ,l         1
+  end_round
+                                  fff02955         0   none ,l         3
+  return
+                                  fff0296f         0   none ,l         0
+FILE=__COM_CONV32ud
+                                  fff02976  fff029b3        3e
+  __COM_CONV32ud
+                                  fff02976         0   none ,g        17
+  next_8
+                                  fff02988         0   none ,l         1
+  next_4
+                                  fff02990         0   none ,l         1
+  next_2
+                                  fff02998         0   none ,l         1
+  next_1
+                                  fff029a0         0   none ,l         1
+  next_0
+                                  fff029a8         0   none ,l         1
+  pack
+                                  fff029aa         0   none ,l         0
+  return
+                                  fff029b3         0   none ,l         1
+FILE=__initsct
+                                  fff029b4  fff029fd        4a
+  __INITSCT
+                                  fff029b4         0   none ,g         1
+  loop1
+                                  fff029c6         0   none ,l         1
+  next_loop1
+                                  fff029d4         0   none ,l         2
+  loop3
+                                  fff029e6         0   none ,l         1
+  next_loop3
+                                  fff029f7         0   none ,l         2
+FILE=R_CGC_ControlAll
+                                  fff029fe  fff02f66       569
+  _R_CGC_ControlAll
+                                  fff029fe       569   func ,g        10
+FILE=R_CGC_GetStatusAll
+                                  fff02f67  fff02fb3        4d
+  _R_CGC_GetStatusAll
+                                  fff02f67        4d   func ,g         4
+FILE=R_CGC_SetAll
+                                  fff02fb4  fff038a7       8f4
+  _R_CGC_SetAll
+                                  fff02fb4       755   func ,g         a
+  _Find_Divider_Setting
+                                  fff03709        77   func ,l         7
+  _Select_Sub_Waiting_Time
+                                  fff03780        c0   func ,l         1
+  _rpdl_CGC_RTC_ColdStartInit
+                                  fff03840        68   func ,l         1
+FILE=R_CMT_ControlAll
+                                  fff038a8  fff03a58       1b1
+  _R_CMT_ControlAll
+                                  fff038a8       1b1   func ,g         4
+FILE=R_CMT_CreateAll
+                                  fff03a59  fff03c3e       1e6
+  _R_CMT_CreateAll
+                                  fff03a59       1e6   func ,g         1
+FILE=R_CMT_DestroyAll
+                                  fff03c3f  fff03cb3        75
+  _R_CMT_DestroyAll
+                                  fff03c3f        75   func ,g         1
+FILE=R_CMT_ReadAll
+                                  fff03cb4  fff03cf8        45
+  _R_CMT_ReadAll
+                                  fff03cb4        45   func ,g         1
+FILE=R_IO_PORT_NotAvailableAll
+                                  fff03cf9  fff03e61       169
+  _R_IO_PORT_NotAvailableAll
+                                  fff03cf9       169   func ,g         1
+FILE=R_LPC_ControlAll
+                                  fff03e62  fff04033       1d2
+  _R_LPC_ControlAll
+                                  fff03e62       1d2   func ,g         6
+FILE=R_LPC_CreateAll
+                                  fff04034  fff04878       845
+  _R_LPC_CreateAll
+                                  fff04034       4f7   func ,g         1
+  _IRQ_Configure
+                                  fff0452b       34e   func ,l         1
+FILE=R_LPC_GetStatusAll
+                                  fff04879  fff048f2        7a
+  _R_LPC_GetStatusAll
+                                  fff04879        7a   func ,g         4
+FILE=R_SCI_ControlAll
+                                  fff048f3  fff04a5f       16d
+  _R_SCI_ControlAll
+                                  fff048f3       16d   func ,g         2
+FILE=R_SCI_CreateAll
+                                  fff04a60  fff05d9b      133c
+  _R_SCI_CreateAll
+                                  fff04a60        5c   func ,g         1
+  _R_SCI_CreateAsyncAll
+                                  fff04abc       17c   func ,g         1
+  _R_SCI_CreateSyncAll
+                                  fff04c38       136   func ,g         1
+  _Create_SPI
+                                  fff04d6e        4f   func ,l         1
+  _Create_IIC
+                                  fff04dbd       296   func ,l         1
+  _R_SCI_CreateSmartAll
+                                  fff05053       1b7   func ,g         1
+  _R_SCI_CreateCommon
+                                  fff0520a       2df   func ,l         5
+  _CreateAsync_Pins
+                                  fff054e9        5e   func ,l         1
+  _CreateSync_Pins
+                                  fff05547        55   func ,l         1
+  _CreateSPI_Pins
+                                  fff0559c        3f   func ,l         1
+  _CreateIIC_Pins
+                                  fff055db       253   func ,l         2
+  _CreateSmart_Pins
+                                  fff0582e        28   func ,l         1
+  _Create_Pins_SCK
+                                  fff05856       154   func ,l         4
+  _Create_Pins_CTS_RTS_SS
+                                  fff059aa       13b   func ,l         3
+  _Create_Pins_RXD
+                                  fff05ae5       163   func ,l         5
+  _Create_Pins_TXD
+                                  fff05c48       154   func ,l         4
+FILE=R_SCI_DestroyAll
+                                  fff05d9c  fff05fd2       237
+  _R_SCI_DestroyAll
+                                  fff05d9c       237   func ,g         1
+FILE=R_SCI_GetStatusAll
+                                  fff05fd3  fff0609e        cc
+  _R_SCI_GetStatusAll
+                                  fff05fd3        cc   func ,g         4
+FILE=R_SCI_IIC
+                                  fff0609f  fff0680e       770
+  _R_SCI_IIC_WriteAll
+                                  fff0609f       177   func ,g         0
+  _R_SCI_IIC_ReadAll
+                                  fff06216       1fe   func ,g         0
+  _Transfer_Common
+                                  fff06414        8d   func ,l         2
+  _R_SCI_IIC_ReadLastByteAll
+                                  fff064a1        9c   func ,g         0
+  _rpdl_SCI_IIC_Stop
+                                  fff0653d        15   func ,g         1
+  _R_SCI_IIC_Handler_RXI
+                                  fff06552        ae   func ,g         9
+  _R_SCI_IIC_Handler_TXI
+                                  fff06600        b2   func ,g         9
+  _StartConditionWait
+                                  fff066b2        4c   func ,l         2
+  _StopConditionWait
+                                  fff066fe        64   func ,l         6
+  _SlaveAddressWait
+                                  fff06762        ad   func ,l         2
+FILE=R_SCI_ReceiveAll
+                                  fff0680f  fff06bcf       3c1
+  _R_SCI_ReceiveAll
+                                  fff0680f        95   func ,g         1
+  _R_SCI_ReceiveStationID
+                                  fff068a4       132   func ,g         1
+  _R_SCI_ReceiveData
+                                  fff069d6       1fa   func ,g         1
+FILE=R_SCI_SendAll
+                                  fff06bd0  fff06f04       335
+  _R_SCI_SendAll
+                                  fff06bd0        31   func ,g         1
+  _R_SCI_SendStationID
+                                  fff06c01        b8   func ,g         1
+  _R_SCI_SendData
+                                  fff06cb9       24c   func ,g         1
+FILE=R_SCI_SetAll
+                                  fff06f05  fff07921       a1d
+  _R_SCI_SetAll
+                                  fff06f05       a1d   func ,g         1
+FILE=utilities_ADC_10
+                                  fff07922  fff07952        31
+  _rpdl_ADC_10_Start
+                                  fff07922        10   func ,g         2
+  _rpdl_ADC_10_ModifyIEN
+                                  fff07932        21   func ,g         0
+FILE=utilities_common
+                                  fff07953  fff07d0b       3b9
+  _rpdl_common_BCD8_check
+                                  fff07953        19   func ,g         0
+  _rpdl_common_BCD16_check
+                                  fff0796c        19   func ,g         0
+  _rpdl_common_BCD32_check
+                                  fff07985        13   func ,g         0
+  _rpdl_BCD8_to_dec
+                                  fff07998        12   func ,g         0
+  _rpdl_BCD16_to_dec
+                                  fff079aa        2e   func ,g         0
+  _rpdl_register_protection
+                                  fff079d8        2d   func ,g        2d
+  _rpdl_modify_protection
+                                  fff07a05       10e   func ,g         2
+  _rpdl_bit_number
+                                  fff07b13        15   func ,g         0
+  _rpdl_pin_function_prepare
+                                  fff07b28        3e   func ,g        26
+  _rpdl_pin_function_disable
+                                  fff07b66        3c   func ,g        3b
+  _rpdl_pin_analog_enable
+                                  fff07ba2        35   func ,g         0
+  _rpdl_pin_analog_disable
+                                  fff07bd7        32   func ,g         0
+  _rpdl_wait_source_clock
+                                  fff07c09        46   func ,g         0
+  _rpdl_wait_time
+                                  fff07c4f        a8   func ,g         e
+  _rpdl_In_ROM_Program_Erase_Mode
+                                  fff07cf7        15   func ,g         3
+FILE=utilities_SCI
+                                  fff07d0c  fff088f3       be8
+  _rpdl_SCI_SetIdleOutputState
+                                  fff07d0c       1da   func ,g         3
+  _rpdl_SCI_SetTxPinGeneralIO
+                                  fff07ee6       205   func ,g        10
+  _rpdl_SCI_ReadRXD
+                                  fff080eb       1dd   func ,g         1
+  _rpdl_SCI_ModifyTx_IER
+                                  fff082c8       117   func ,g        15
+  _rpdl_SCI_ModifyTxEnd_IER
+                                  fff083df       117   func ,g        10
+  _rpdl_SCI_ModifyRxIER
+                                  fff084f6       220   func ,g         8
+  _rpdl_SCI_EnableReception
+                                  fff08716        b4   func ,g         4
+  _rpdl_SCI_EnableTransmission
+                                  fff087ca        78   func ,g         2
+  _rpdl_SCI_Initialise_Smart
+                                  fff08842        b2   func ,g         2
+FILE=__COM_ADDd_SUBd
+                                  fff088f4  fff08ad6       1e3
+  __COM_SUBd
+                                  fff088f4         0   none ,g         4
+  __COM_ADDd
+                                  fff088f7         0   none ,g         0
+  swap
+                                  fff08916         0   none ,l         1
+  swap_end
+                                  fff0891e         0   none ,l         2
+  x_normal
+                                  fff08939         0   none ,l         1
+  after_shift
+                                  fff0896b         0   none ,l         2
+  round1
+                                  fff08979         0   none ,l         5
+  return_x_asis
+                                  fff08996         0   none ,l         1
+  pack
+                                  fff08998         0   none ,l         1
+  pack_sign
+                                  fff0899c         0   none ,l         4
+  inf_or_nan
+                                  fff089a5         0   none ,l         1
+  return_nan
+                                  fff089b4         0   none ,l         1
+  zero_or_den
+                                  fff089bf         0   none ,l         1
+  add_ovf
+                                  fff089d5         0   none ,l         1
+  return_inf
+                                  fff089e6         0   none ,l         2
+  subtract
+                                  fff089f4         0   none ,l         1
+  sub_underflow
+                                  fff08a08         0   none ,l         2
+  normalize1
+                                  fff08a1a         0   none ,l         1
+  normalize2
+                                  fff08a2c         0   none ,l         1
+  normalize3
+                                  fff08a3f         0   none ,l         1
+  normalize4
+                                  fff08a51         0   none ,l         1
+  normalize_1bit_shift
+                                  fff08a58         0   none ,l         1
+  normalize5
+                                  fff08a60         0   none ,l         1
+  den_shift_more_than_32
+                                  fff08a87         0   none ,l         1
+  shift_end
+                                  fff08a97         0   none ,l         1
+  sub_underflow1
+                                  fff08a9c         0   none ,l         1
+  denormal
+                                  fff08ab2         0   none ,l         1
+  return
+                                  fff08ac5         0   none ,l         1
+  x_normal_preparation
+                                  fff08ac8         0   none ,l         1
+  den_add
+                                  fff08acf         0   none ,l         1
+FILE=__COM_CMPGEd
+                                  fff08ad7  fff08b4e        78
+  __COM_CMPGEd
+                                  fff08ad7         0   none ,g         2
+  exception_return1
+                                  fff08af7         0   none ,l         1
+  exception_return2
+                                  fff08afb         0   none ,l         1
+  exception_return3
+                                  fff08aff         0   none ,l         3
+  minus
+                                  fff08b16         0   none ,l         1
+  sign_def
+                                  fff08b24         0   none ,l         1
+  exception1
+                                  fff08b2c         0   none ,l         1
+  exception2
+                                  fff08b35         0   none ,l         1
+  exception3
+                                  fff08b3e         0   none ,l         1
+FILE=__COM_CMPGTd
+                                  fff08b4f  fff08bc2        74
+  __COM_CMPGTd
+                                  fff08b4f         0   none ,g        17
+  exception_return1
+                                  fff08b6f         0   none ,l         1
+  exception_return2
+                                  fff08b73         0   none ,l         1
+  exception_return3
+                                  fff08b77         0   none ,l         3
+  minus
+                                  fff08b8d         0   none ,l         1
+  sign_def
+                                  fff08b98         0   none ,l         1
+  exception1
+                                  fff08ba0         0   none ,l         1
+  exception2
+                                  fff08ba9         0   none ,l         1
+  exception3
+                                  fff08bb2         0   none ,l         1
+FILE=__COM_CMPLEd
+                                  fff08bc3  fff08c3a        78
+  __COM_CMPLEd
+                                  fff08bc3         0   none ,g         a
+  exception_return1
+                                  fff08be3         0   none ,l         1
+  exception_return2
+                                  fff08be7         0   none ,l         1
+  exception_return3
+                                  fff08beb         0   none ,l         3
+  minus
+                                  fff08c02         0   none ,l         1
+  sign_def
+                                  fff08c10         0   none ,l         1
+  return
+                                  fff08c15         0   none ,l         0
+  exception1
+                                  fff08c18         0   none ,l         1
+  exception2
+                                  fff08c21         0   none ,l         1
+  exception3
+                                  fff08c2a         0   none ,l         1
+FILE=__COM_CMPLTd
+                                  fff08c3b  fff08cae        74
+  __COM_CMPLTd
+                                  fff08c3b         0   none ,g        15
+  exception_return1
+                                  fff08c5b         0   none ,l         1
+  exception_return2
+                                  fff08c5f         0   none ,l         1
+  exception_return3
+                                  fff08c63         0   none ,l         3
+  minus
+                                  fff08c79         0   none ,l         1
+  sign_def
+                                  fff08c84         0   none ,l         1
+  return
+                                  fff08c89         0   none ,l         0
+  exception1
+                                  fff08c8c         0   none ,l         1
+  exception2
+                                  fff08c95         0   none ,l         1
+  exception3
+                                  fff08c9e         0   none ,l         1
+FILE=__COM_CONVd32
+                                  fff08caf  fff08d01        53
+  __COM_CONVd32u
+                                  fff08caf         0   none ,g        11
+  __COM_CONVd32s
+                                  fff08cb2         0   none ,g         0
+  unpack
+                                  fff08cb5         0   none ,l         1
+  return
+                                  fff08cda         0   none ,l         1
+  return_zero
+                                  fff08cdb         0   none ,l         1
+  exp_over30
+                                  fff08cde         0   none ,l         1
+  exp_over31
+                                  fff08ce0         0   none ,l         0
+  exp_equal31
+                                  fff08cef         0   none ,l         1
+FILE=__COM_MULd
+                                  fff08d02  fff08e8f       18e
+  __COM_MULd
+                                  fff08d02         0   none ,g         3
+  x_normal
+                                  fff08d3c         0   none ,l         2
+  muld_msb_one
+                                  fff08d7a         0   none ,l         1
+  round1
+                                  fff08d89         0   none ,l         1
+  y_is_inf_or_nan
+                                  fff08da9         0   none ,l         1
+  x_is_inf_or_nan
+                                  fff08db1         0   none ,l         1
+  return_inf
+                                  fff08dbf         0   none ,l         2
+  y_is_not_inf_or_nan
+                                  fff08dcc         0   none ,l         1
+  return_nan
+                                  fff08dd2         0   none ,l         2
+  x_is_zero_or_den
+                                  fff08ddd         0   none ,l         1
+  y_is_zero_or_den
+                                  fff08de6         0   none ,l         1
+  return_zero
+                                  fff08dea         0   none ,l         2
+  denormal
+                                  fff08df1         0   none ,l         1
+  normalize2
+                                  fff08e08         0   none ,l         2
+  normalize3
+                                  fff08e1a         0   none ,l         1
+  normalize4
+                                  fff08e2c         0   none ,l         1
+  normalize5
+                                  fff08e3f         0   none ,l         1
+  normalize6
+                                  fff08e51         0   none ,l         1
+  return_denormal
+                                  fff08e63         0   none ,l         1
+  den_minus32_or_more
+                                  fff08e8b         0   none ,l         1
+FILE=utilities_CGC
+                                  fff08e90  fff08eaf        20
+  _rpdl_CGC_MinimumDivision
+                                  fff08e90        20   func ,g         1
+FILE=utilities_CMT
+                                  fff08eb0  fff08f29        7a
+  _rpdl_CMT_ModifyIEN
+                                  fff08eb0        7a   func ,g         6
+FILE=utilities_LPC
+                                  fff08f2a  fff09059       130
+  _rpdl_LPC_SetOperatingMode
+                                  fff08f2a        71   func ,g         2
+  _LPC_CheckClocksInRange
+                                  fff08f9b        bf   func ,l         2
+
+SECTION=$ADDR_C_FFFFFF80
+FILE=.\src\default\i_src\Interrupt_INTC.obj
+                                  ffffff80  ffffff83         4
+  _MDES_register
+                                  ffffff80         4   data ,g         0
+
+SECTION=FIXEDVECT
+FILE=.\src\default\i_src\Interrupt_INTC.obj
+                                  ffffffd0  ffffffff        30
+  _Fixed_Vectors
+                                  ffffffd0        30   data ,g         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO

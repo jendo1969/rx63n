@@ -1,0 +1,39 @@
+08:55:20 **** Incremental Build of configuration HardwareDebug for project dcmotor ****
+make -j8 all 
+'Scanning and building file: ../src/dcmotor.c'
+'Invoking: Scanner and Compiler'
+ccrx  -MM -MP -output=dep="src/dcmotor.d" -MT="src/dcmotor.obj" -MT="src/dcmotor.d" -lang=c99   -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\src\dcmotor","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\src\dcmotor\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -optimize=0 -fpu -nologo  -define=__RX=1   "../src/dcmotor.c"
+W0511180:The evaluation period has expired.
+ccrx -lang=c99 -output=obj="src/dcmotor.obj"  -include="C:\PROGRA~2\Renesas\RX\2_6_0/include","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\src\dcmotor","D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\src\dcmotor\i_src"  -debug -nomessage -isa=rxv1 -dbl_size=8 -optimize=0 -fpu -nologo  -define=__RX=1   "../src/dcmotor.c"
+W0511180:The evaluation period has expired.
+'Finished scanning and building: ../src/dcmotor.c'
+
+'Invoking: Linker'
+'Building target:'
+rlink  -subcommand="LinkerSubCommand.tmp"  -library="D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.lib" -library="D:\Renesas\PDG2\lib\RX63N\RX63N_library_100_little.lib" -noprelink -list="dcmotor.map" -show -nooptimize -debug -output="D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.abs" -rom=D=R,D_1=R_1,D_2=R_2 -nocompress -nomessage -nologo
+
+The evaluation period has expired.
+Renesas Optimizing Linker Completed
+'Finished building:'
+
+'Invoking: Converter'
+rlink   "D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.abs" -form=stype  -output="D:\Jiro\workspace\e2studio_5_4_0_015\rx63n\dcmotor\HardwareDebug\dcmotor.mot" -nomessage
+
+Renesas Optimizing Linker W2.06.00  [21 Dec 2016]
+   Copyright (C) 2011, 2016 Renesas Electronics Corporation
+
+The evaluation period has expired.
+Renesas Optimizing Linker Completed
+'Finished building target:'
+
+make --no-print-directory post-build
+
+C:\Renesas\E2_STU~1\DEBUGC~1\RENESA~1.EXE dcmotor.abs dcmotor.x 
+Loading input file dcmotor.abs
+Parsing the ELF input file.....
+27 segments required LMA fixes
+Converting the DWARF information....
+Constructing the output ELF image....
+Saving the ELF output file dcmotor.x
+
+'Build complete.'
